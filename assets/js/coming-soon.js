@@ -28,23 +28,6 @@
     setTimeout(next, 3600);
   }
 
-  /* ---------- Scroll reveals, staggered inside each section ---------- */
-  if (motion) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-in');
-        io.unobserve(entry.target);
-      });
-    }, { rootMargin: '0px 0px -10% 0px' });
-    $$('.section, .band').forEach((section) => {
-      $$('.reveal', section).forEach((el, n) => {
-        el.style.setProperty('--d', `${Math.min(n, 5) * 0.08}s`);
-        io.observe(el);
-      });
-    });
-  }
-
   /* ---------- Sign-up: validate, send, stamp ---------- */
   const form = $('#resta-connesso');
   if (form) {
@@ -102,7 +85,7 @@
           if (!res.ok) throw new Error(String(res.status));
           form.reset();
           signed();
-          showStatus('Firmato e registrato. Ti scriviamo il giorno dell’apertura, promesso.', 'ok');
+          showStatus('Iscrizione ricevuta. Ti scriviamo il giorno dell’apertura, promesso.', 'ok');
           return;
         } catch (err) {
           showStatus(`Non siamo riusciti a registrare la tua email. Riprova tra poco oppure scrivici a ${email}.`);
@@ -117,13 +100,12 @@
         `Nome: ${data.get('nome') || '-'}`,
         `Azienda: ${data.get('azienda') || '-'}`,
         `Ruolo: ${data.get('ruolo') || '-'}`,
-        `Interesse: ${data.get('interesse') || '-'}`,
         'Consenso a ricevere email sul lancio e sui servizi: sì'
       ].join('\n');
       const subject = `Resta connesso · ${data.get('azienda') || data.get('email')}`;
       window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       signed();
-      showStatus(`Abbiamo preparato l'email nel tuo programma di posta: inviala e sei dei nostri. Se non si è aperto, scrivici a ${email}.`, 'ok');
+      showStatus(`Abbiamo preparato l'email nel tuo programma di posta: inviala e sei iscritto. Se non si è aperto, scrivici a ${email}.`, 'ok');
     });
 
     emailField.addEventListener('input', () => {
@@ -137,29 +119,6 @@
         consentLabel.dataset.invalid = 'false';
         consent.setAttribute('aria-invalid', 'false');
         consent.removeAttribute('aria-describedby');
-      }
-    });
-  }
-
-  /* ---------- Copy email ---------- */
-  const copyBtn = $('#copy-email');
-  if (copyBtn) {
-    const label = copyBtn.querySelector('span');
-    const target = $('#contact-email');
-    copyBtn.addEventListener('click', () => {
-      const done = (msg) => { label.textContent = msg; setTimeout(() => { label.textContent = 'Copia'; }, 2200); };
-      const selectText = () => {
-        const range = document.createRange();
-        range.selectNodeContents(target);
-        const sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-        done('Selezionata');
-      };
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(target.textContent.trim()).then(() => done('Copiata'), selectText);
-      } else {
-        selectText();
       }
     });
   }

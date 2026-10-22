@@ -77,17 +77,6 @@
         "isPartOf": { "@id": "https://www.legalproductstudio.tech/#website" },
         "about": { "@id": "https://www.legalproductstudio.tech/#studio" },
         "inLanguage": "it-IT"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.legalproductstudio.tech/#faq",
-        "mainEntity": [
-          { "@type": "Question", "name": "Che cos'è il legal design?", "acceptedAnswer": { "@type": "Answer", "text": "Il legal design applica i metodi del design ai contenuti e ai processi giuridici. Informative, contratti, consensi e flussi diventano chiari, usabili e verificabili, senza perdere precisione giuridica." } },
-          { "@type": "Question", "name": "Che cosa fa un giurista designer in un team di prodotto?", "acceptedAnswer": { "@type": "Answer", "text": "Lavora dentro il team accanto a product owner, designer e sviluppatori. Traduce GDPR, AI Act, European Accessibility Act e Codice del Consumo in requisiti e user story, così la conformità si progetta dal primo giorno invece di arrivare come parere bloccante a fine sprint." } },
-          { "@type": "Question", "name": "A quali aziende si rivolge Legal Product Studio?", "acceptedAnswer": { "@type": "Answer", "text": "A chi costruisce prodotti e servizi digitali: startup e scale-up SaaS, fintech e insurtech, e-commerce, healthtech, PMI che digitalizzano i propri servizi e team prodotto di grandi aziende." } },
-          { "@type": "Question", "name": "Quando apre lo studio?", "acceptedAnswer": { "@type": "Answer", "text": "Molto presto. Lasciando la tua email ricevi la data di apertura, i primi contenuti e la possibilità di prenotare tra i primi una Discovery Call gratuita di 30 minuti." } },
-          { "@type": "Question", "name": "Cosa succede ai dati che lascio nel modulo?", "acceptedAnswer": { "@type": "Answer", "text": "Li usiamo solo per scriverti sul lancio e sui servizi dello studio, nei limiti di ciò che hai scelto. Niente terze parti a fini commerciali, niente cookie né tracker su questo sito. Puoi cancellarti in qualsiasi momento." } }
-        ]
       }
     ]
   }
@@ -102,8 +91,7 @@
 </script>
 <svg class="sprite" aria-hidden="true" focusable="false">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v13M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 
@@ -125,7 +113,7 @@
   <!-- HERO + SIGN-UP -->
   <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
-      <div class="hero-copy reveal">
+      <div class="hero-copy">
         <p class="eyebrow"><span class="art">Coming soon</span><span lang="en">Law, by design.</span></p>
         <h1 class="hero-title" id="hero-title">
           <span class="hero-kicker">Legal design e compliance by design per prodotti digitali.</span>
@@ -150,19 +138,11 @@
       </div>
 
       <!-- Set data-endpoint to a form or newsletter service URL (e.g. Formspree, Brevo) to send via POST; leave empty to open the visitor's email client. -->
-      <form class="signup reveal" id="resta-connesso" data-endpoint="" data-email="ciao@legalproductstudio.tech" novalidate aria-labelledby="signup-title">
+      <form class="signup" id="resta-connesso" data-endpoint="" data-email="ciao@legalproductstudio.tech" novalidate aria-labelledby="signup-title">
         <header class="signup-head">
-          <p class="signup-file">modulo_adesione_v1.pdf</p>
           <h2 class="signup-title" id="signup-title">Scopri di più, prima di tutti.</h2>
           <p class="signup-lead">Lascia la tua email: ti scriviamo il giorno dell'apertura, con i primi contenuti e un posto riservato per una Discovery Call gratuita di 30 minuti.</p>
         </header>
-
-        <fieldset class="field chips">
-          <legend>Cosa ti interessa?</legend>
-          <label><input type="radio" name="interesse" value="Restare aggiornato sul lancio" checked><span>Restare aggiornato</span></label>
-          <label><input type="radio" name="interesse" value="Saperne di più sui servizi"><span>Saperne di più</span></label>
-          <label><input type="radio" name="interesse" value="Parlare con lo studio"><span>Parlare con voi</span></label>
-        </fieldset>
 
         <div class="field">
           <label for="f-email">Email di lavoro <span class="req">(obbligatoria)</span></label>
@@ -199,144 +179,16 @@
 
         <label class="consent" for="f-consent">
           <input id="f-consent" name="consenso" type="checkbox" value="Sì" required>
-          <span>Voglio ricevere email da Legal Product Studio sul lancio e sui servizi. Posso cancellarmi quando voglio. <span class="req">(obbligatorio)</span></span>
+          <span>Ho preso visione dell'<button type="button" class="link-btn" data-open-privacy>informativa privacy</button> e voglio ricevere email da Legal Product Studio sul lancio e sui servizi. Posso cancellarmi quando voglio. <span class="req">(obbligatorio)</span></span>
         </label>
 
         <div class="signature">
-          <button type="submit" class="btn btn-primary btn-lg">Firma e resta connesso <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          <div class="stamp" id="stamp" aria-hidden="true"><span class="stamp-ring"></span><span class="stamp-word">Firmato</span><span class="stamp-date" id="stamp-date"></span></div>
+          <button type="submit" class="btn btn-primary btn-lg">Invia <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <div class="stamp" id="stamp" aria-hidden="true"><span class="stamp-ring"></span><span class="stamp-word">Ricevuto</span><span class="stamp-date" id="stamp-date"></span></div>
         </div>
         <p class="form-privacy">Niente spam, niente terze parti a fini commerciali. <button type="button" class="link-btn" data-open-privacy>Privacy in breve</button></p>
         <p class="form-status" id="form-status" role="status" hidden></p>
       </form>
-    </div>
-  </section>
-
-  <!-- ART. 1 · DRAFT STATUTE -->
-  <section class="section" id="cosa-arriva" aria-labelledby="arriva-title">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="art">Art. 1</span> Cosa stiamo preparando</p>
-        <h2 class="h2" id="arriva-title">Cinque servizi per progettare prodotti <em>conformi e desiderabili</em>.</h2>
-        <p class="lead">Il nostro statuto è ancora in bozza, ma gli articoli principali sono già scritti. Ecco cosa troverai all'apertura.</p>
-      </div>
-
-      <ol class="articles">
-        <li class="article reveal">
-          <p class="article-n">Comma 1 <span class="status status-ok">Approvato</span></p>
-          <h3>Legal Copilot in-product</h3>
-          <p>Un giurista designer dentro i tuoi sprint, dal primo wireframe all'ultimo rilascio. Partecipa a refinement e review e scrive i requisiti legali come criteri di accettazione.</p>
-        </li>
-        <li class="article reveal">
-          <p class="article-n">Comma 2 <span class="status status-ok">Approvato</span></p>
-          <h3>Legal design di privacy policy e termini</h3>
-          <p>Informative privacy, termini e condizioni e cookie banner a più livelli, scritti in italiano chiaro e integrati nell'esperienza d'uso. Conformi all'art. 12 GDPR, e finalmente letti.</p>
-        </li>
-        <li class="article reveal">
-          <p class="article-n">Comma 3 <span class="status status-rev">In revisione</span></p>
-          <h3>AI Act, FRIA e Value Sensitive Design</h3>
-          <p>Classifichiamo i tuoi sistemi di intelligenza artificiale per livello di rischio, conduciamo la valutazione d'impatto sui diritti fondamentali e trasformiamo i valori in scelte di design.</p>
-        </li>
-        <li class="article reveal">
-          <p class="article-n">Comma 4 <span class="status status-ok">Approvato</span></p>
-          <h3>Accessibilità ed European Accessibility Act</h3>
-          <p>Audit WCAG 2.2 e piano di adeguamento all'EAA, in vigore dal 28 giugno 2025 per e-commerce, servizi bancari, trasporti ed e-book. Accessibili davvero, non solo sulla carta.</p>
-        </li>
-        <li class="article reveal">
-          <p class="article-n">Comma 5 <span class="status status-rev">In revisione</span></p>
-          <h3>Fair Pattern Audit</h3>
-          <p>Troviamo i dark pattern nelle tue interfacce, dai consensi forzati agli abbonamenti impossibili da disdire, e li riprogettiamo in fair pattern conformi a DSA e Codice del Consumo.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ART. 2 · AUDIENCE -->
-  <section class="section section-alt" id="per-chi" aria-labelledby="perchi-title">
-    <div class="wrap split">
-      <div class="reveal">
-        <p class="eyebrow"><span class="art">Art. 2</span> Per chi</p>
-        <h2 class="h2" id="perchi-title">Per le aziende che costruiscono <em>prodotti digitali</em>.</h2>
-        <p class="lead">Se il tuo team rilascia ogni due settimane, il diritto non può arrivare ogni sei mesi. Lavoriamo con chi vuole trasformare la conformità in fiducia, e la fiducia in un vantaggio competitivo.</p>
-      </div>
-      <ul class="sectors reveal" aria-label="Settori">
-        <li><strong>SaaS e piattaforme B2B</strong><span>Contratti, DPA e flussi di consenso che non frenano la vendita.</span></li>
-        <li><strong>Fintech e insurtech</strong><span>Trasparenza, accessibilità EAA e scelte informate per i clienti.</span></li>
-        <li><strong>E-commerce e retail digitale</strong><span>Checkout senza dark pattern, recesso chiaro, accessibilità.</span></li>
-        <li><strong>Healthtech e servizi alla persona</strong><span>Dati sanitari, consensi granulari e AI ad alto rischio.</span></li>
-        <li><strong>PMI che digitalizzano i servizi</strong><span>Un presidio legale snello, dentro il progetto e non a valle.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ART. 3 · WHY NOW -->
-  <section class="section" id="perche-ora" aria-labelledby="ora-title">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="eyebrow"><span class="art">Art. 3</span> Perché adesso</p>
-        <h2 class="h2" id="ora-title">Le regole sono cambiate. <em>Il modo di applicarle</em> deve cambiare con loro.</h2>
-      </div>
-      <dl class="figures">
-        <div class="figure reveal">
-          <dt>GDPR, art. 83</dt>
-          <dd><span class="figure-n">4%</span> del fatturato mondiale annuo: il tetto delle sanzioni più gravi, o 20 milioni di euro.</dd>
-        </div>
-        <div class="figure reveal">
-          <dt>AI Act, art. 99</dt>
-          <dd><span class="figure-n">7%</span> del fatturato mondiale annuo per le pratiche di AI vietate, o 35 milioni di euro.</dd>
-        </div>
-        <div class="figure reveal">
-          <dt>European Accessibility Act</dt>
-          <dd><span class="figure-n">2025</span> dal 28 giugno molti prodotti e servizi digitali devono essere accessibili per legge.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
-    <div class="wrap split">
-      <div class="reveal">
-        <p class="eyebrow"><span class="art">Art. 4</span> Domande frequenti</p>
-        <h2 class="h2" id="faq-title">Prima di firmare, <em>chiedi pure</em>.</h2>
-      </div>
-      <div class="faqs reveal">
-        <details class="faq">
-          <summary>Che cos'è il legal design?</summary>
-          <p>Il legal design applica i metodi del design ai contenuti e ai processi giuridici. Informative, contratti, consensi e flussi diventano chiari, usabili e verificabili, senza perdere precisione giuridica.</p>
-        </details>
-        <details class="faq">
-          <summary>Che cosa fa un giurista designer in un team di prodotto?</summary>
-          <p>Lavora dentro il team accanto a product owner, designer e sviluppatori. Traduce GDPR, AI Act, European Accessibility Act e Codice del Consumo in requisiti e user story, così la conformità si progetta dal primo giorno invece di arrivare come parere bloccante a fine sprint.</p>
-        </details>
-        <details class="faq">
-          <summary>A quali aziende vi rivolgete?</summary>
-          <p>A chi costruisce prodotti e servizi digitali: startup e scale-up SaaS, fintech e insurtech, e-commerce, healthtech, PMI che digitalizzano i propri servizi e team prodotto di grandi aziende.</p>
-        </details>
-        <details class="faq">
-          <summary>Quando apre lo studio?</summary>
-          <p>Molto presto. Lasciando la tua email ricevi la data di apertura, i primi contenuti e la possibilità di prenotare tra i primi una Discovery Call gratuita di 30 minuti.</p>
-        </details>
-        <details class="faq">
-          <summary>Cosa succede ai dati che lascio nel modulo?</summary>
-          <p>Li usiamo solo per scriverti sul lancio e sui servizi dello studio, nei limiti di ciò che hai scelto. Niente terze parti a fini commerciali, niente cookie né tracker su questo sito. Puoi cancellarti in qualsiasi momento.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CLOSING CTA -->
-  <section class="band" aria-labelledby="band-title">
-    <div class="wrap band-inner reveal">
-      <p class="eyebrow eyebrow-band">Letto, approvato e sottoscritto</p>
-      <h2 class="h2 band-title" id="band-title">Il tuo prossimo sprint ha un posto libero al tavolo.</h2>
-      <div class="band-actions">
-        <a class="btn btn-light btn-lg" href="#resta-connesso">Resta connesso <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <p class="direct-row">
-          <span class="direct-email" id="contact-email">ciao@legalproductstudio.tech</span>
-          <button type="button" class="copy-btn" id="copy-email"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copia</span></button>
-        </p>
-      </div>
     </div>
   </section>
 </main>
@@ -358,7 +210,7 @@
     <p class="eyebrow">Primo livello</p>
     <h2 class="h3" id="privacy-title">Privacy in breve</h2>
     <dl class="privacy-list">
-      <div><dt>Cosa raccogliamo</dt><dd>L'email e, se li indichi, nome, azienda, ruolo e il tuo interesse.</dd></div>
+      <div><dt>Cosa raccogliamo</dt><dd>L'email e, se li indichi, nome, azienda e ruolo.</dd></div>
       <div><dt>Perché</dt><dd>Per scriverti sull'apertura dello studio e sui suoi servizi, con il tuo consenso (art. 6.1.a GDPR).</dd></div>
       <div><dt>Cookie e tracker</dt><dd>Nessuno.</dd></div>
       <div><dt>Terze parti</dt><dd>Solo il fornitore che usiamo per ricevere il modulo e inviare le email, come responsabile del trattamento. Mai a fini commerciali.</dd></div>
