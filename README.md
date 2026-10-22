@@ -4,6 +4,15 @@ Sito one-page per uno studio che porta il **giurista designer** dentro i team di
 
 Statico, senza build e senza dipendenze: HTML, CSS e JavaScript puri.
 
+## Coming soon
+
+Fino al lancio la home (`index.html`) è una pagina **coming soon** con un modulo "Resta connesso" per raccogliere i contatti delle aziende interessate. Il sito completo resta consultabile in `anteprima.html` (con `noindex`, per non competere con la home su Google): utile da mostrare ai potenziali clienti.
+
+- **Raccolta contatti.** Il modulo `#resta-connesso` chiede email (obbligatoria), nome, azienda, ruolo, interesse e un consenso esplicito, non preselezionato. Imposta `data-endpoint` con l'URL di un servizio di form o newsletter (per esempio Formspree o Brevo) per ricevere le iscrizioni in POST; senza, apre il programma di posta del visitatore. Un campo nascosto (honeypot) scarta lo spam.
+- **SEO.** Title e description mirati (legal design, compliance by design, GDPR, AI Act, EAA, dark pattern), `canonical` e `hreflang` su `https://www.legalproductstudio.tech/`, Open Graph e Twitter card, dati strutturati JSON-LD (`ProfessionalService` con catalogo servizi, `WebSite`, `WebPage`, `FAQPage`), contenuti indicizzabili per servizi, settori target e FAQ, `robots.txt`, `sitemap.xml` e `llms.txt` per i motori di risposta basati su AI. Nessuna risorsa di terze parti: pagina leggera e veloce (Core Web Vitals).
+- **Dopo la pubblicazione.** Verifica il dominio in Google Search Console e Bing Webmaster Tools e invia `sitemap.xml`. Se il dominio non usa `www`, aggiorna gli URL assoluti in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
+- **Al lancio.** Rinomina `anteprima.html` in `index.html` (togliendo il `noindex`) e aggiungi le nuove pagine alla sitemap.
+
 ## Avvio in locale
 
 ```bash
@@ -14,7 +23,10 @@ python3 -m http.server 8000
 ## Struttura
 
 ```
-index.html              pagina unica
+index.html              coming soon (home fino al lancio)
+anteprima.html          sito completo, non indicizzato
+assets/css/coming-soon.css, assets/js/coming-soon.js  stili e script della coming soon
+robots.txt, sitemap.xml, llms.txt                     file per i motori di ricerca
 assets/css/fonts.css    @font-face dei caratteri ospitati in locale
 assets/css/styles.css   design token (colori, tipografia, spazi) e stili
 assets/js/main.js       interazioni (revisioni nell'hero, slider prima/dopo,

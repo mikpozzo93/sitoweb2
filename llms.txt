@@ -1,0 +1,20 @@
+# Legal Product Studio
+
+> Studio italiano di legal product design (apertura imminente). Porta il giurista designer dentro i team di prodotto digitali per progettare servizi trasparenti, etici e conformi a GDPR, AI Act, European Accessibility Act, Digital Services Act e Codice del Consumo. Motto: "Law, by design."
+
+## Servizi
+
+- Legal Copilot in-product: un giurista designer integrato negli sprint, dal primo wireframe al rilascio.
+- Legal design di privacy policy, termini e condizioni e cookie banner: contenuti chiari, a più livelli, integrati nell'esperienza d'uso.
+- AI Act, FRIA e Value Sensitive Design: classificazione del rischio dei sistemi di AI e valutazione d'impatto sui diritti fondamentali.
+- Accessibilità digitale ed European Accessibility Act: audit WCAG 2.2 e piano di adeguamento.
+- Fair Pattern Audit: individuazione dei dark pattern e riprogettazione in fair pattern.
+
+## Per chi
+
+Startup e scale-up SaaS, fintech e insurtech, e-commerce, healthtech, PMI che digitalizzano i servizi, team prodotto di grandi aziende.
+
+## Contatti
+
+- Sito: https://www.legalproductstudio.tech/
+- Email: ciao@legalproductstudio.tech
