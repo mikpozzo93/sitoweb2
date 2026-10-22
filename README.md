@@ -6,12 +6,12 @@ Statico, senza build e senza dipendenze: HTML, CSS e JavaScript puri.
 
 ## Coming soon
 
-Fino al lancio la home (`index.html`) è una pagina **coming soon** con un modulo "Resta connesso" per raccogliere i contatti delle aziende interessate. Il sito completo resta consultabile in `anteprima.html` (con `noindex`, per non competere con la home su Google): utile da mostrare ai potenziali clienti.
+Fino al lancio la home (`index.html`) è una pagina **coming soon** con un modulo "Resta connesso" per raccogliere i contatti delle aziende interessate. Il sito completo è la sottopagina `servizi/` (`/servizi/`), indicizzata con titolo, descrizione e dati strutturati propri (`WebPage`, `BreadcrumbList`, `FAQPage`) e collegata dalla home: dà a Google il testo approfondito su servizi, metodo e FAQ.
 
 - **Raccolta contatti.** Il modulo `#resta-connesso` chiede email (obbligatoria), nome, azienda, ruolo e la presa visione dell'informativa privacy con il consenso a ricevere email, non preselezionato. Imposta `data-endpoint` con l'URL di un servizio di form o newsletter (per esempio Formspree o Brevo) per ricevere le iscrizioni in POST; senza, apre il programma di posta del visitatore. Un campo nascosto (honeypot) scarta lo spam.
 - **SEO.** Title e description mirati (legal design, compliance by design, GDPR, AI Act, EAA, dark pattern), `canonical` e `hreflang` su `https://www.legalproductstudio.tech/`, Open Graph e Twitter card, dati strutturati JSON-LD (`ProfessionalService` con catalogo servizi, `WebSite`, `WebPage`), `robots.txt`, `sitemap.xml` e `llms.txt` per i motori di risposta basati su AI. Nessuna risorsa di terze parti: pagina leggera e veloce (Core Web Vitals).
 - **Dopo la pubblicazione.** Verifica il dominio in Google Search Console e Bing Webmaster Tools e invia `sitemap.xml`. Se il dominio non usa `www`, aggiorna gli URL assoluti in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
-- **Al lancio.** Rinomina `anteprima.html` in `index.html` (togliendo il `noindex`) e aggiungi le nuove pagine alla sitemap.
+- **Al lancio.** Decidi se il sito completo diventa la home o resta in `/servizi/`, e aggiungi le nuove pagine alla sitemap.
 
 ## Avvio in locale
 
@@ -24,7 +24,7 @@ python3 -m http.server 8000
 
 ```
 index.html              coming soon (home fino al lancio)
-anteprima.html          sito completo, non indicizzato
+servizi/index.html      sito completo (sottopagina /servizi/)
 assets/css/coming-soon.css, assets/js/coming-soon.js  stili e script della coming soon
 robots.txt, sitemap.xml, llms.txt                     file per i motori di ricerca
 assets/css/fonts.css    @font-face dei caratteri ospitati in locale

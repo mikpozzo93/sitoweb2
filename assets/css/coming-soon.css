@@ -1,6 +1,6 @@
 /* ==========================================================================
    Legal Product Studio · Coming soon
-   Same design language as the full site (anteprima.html): a statute under
+   Same design language as the full site (servizi/index.html): a statute under
    revision, redlines and inserts, a stamp once the sign-up is received.
    One light theme only.
    ========================================================================== */
@@ -143,6 +143,8 @@ em { font-style: normal; }
 .btn-small { min-height: 40px; padding: 0.5em 1em; font-size: var(--t-sm); }
 .btn-primary { background: var(--band); color: var(--on-band); }
 .btn-primary:hover { background: var(--accent-strong); }
+.btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
 
 .link-btn {
   padding: 0; border: 0; background: none; cursor: pointer;
@@ -221,6 +223,7 @@ em { font-style: normal; }
 .hero-lead strong { color: var(--ink); }
 .hero-proof { display: grid; gap: var(--s-2); margin-top: var(--s-5); }
 .hero-proof li { display: flex; align-items: flex-start; gap: var(--s-2); font-weight: 600; }
+.hero-more { margin-top: var(--s-6); }
 .hero-proof svg { width: 1.3em; height: 1.3em; flex: none; color: var(--accent); margin-top: 0.12em; }
 
 .norms {
@@ -327,7 +330,8 @@ em { font-style: normal; }
   margin-top: var(--s-7); padding-top: var(--s-4); border-top: 1px solid var(--line);
   font-size: var(--t-xs); color: var(--ink-2); font-family: var(--f-mono);
 }
-.footer-bottom .link-btn { color: var(--ink); min-height: 44px; }
+.footer-links { display: flex; align-items: center; gap: var(--s-5); }
+.footer-links a, .footer-bottom .link-btn { color: var(--ink); font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; }
 
 /* Privacy dialog */
 .privacy-dialog {
