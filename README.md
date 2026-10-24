@@ -18,8 +18,9 @@ assets/css/site.css        design token e stili
 assets/js/site.js          menu mobile, comparsa al scroll, video YouTube al clic
 assets/fonts/              Atkinson Hyperlegible Next e Mono (licenza SIL OFL)
 assets/img/foto/           ritratti (WebP con JPEG di riserva)
+assets/img/materiali/      copertine dei materiali
 assets/img/og-image.png    anteprima per i social (1200×630)
-assets/materiali/          PDF scaricabili
+assets/materiali/          libro in PDF ed EPUB
 robots.txt, sitemap.xml    file per i motori di ricerca
 llms.txt                   sintesi per i motori di risposta basati su AI
 ```
@@ -32,14 +33,14 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 | (senza ancora) | Tre mestieri, un solo lavoro: avvocato, product manager, legal designer |
 | `#chi-sono` | Biografia, punti chiave e "cosa non sono" |
 | `#temi` | Di cosa mi occupo: GDPR, AI Act, accessibilità, dark pattern, consumatori, identità digitale |
-| `#materiali` | I miei materiali: il libro sul Codice del Consumo in PDF |
+| `#materiali` | I miei materiali: "Acquistare in tranquillità", guida al Codice del Consumo in PDF ed EPUB |
 | `#interventi` | I miei interventi: webinar Exeen Talks, invito a intervenire come relatore |
 | `#contatti` | Email e LinkedIn |
 
 ## Aggiungere contenuti
 
-- **Libro sul Codice del Consumo.** Carica il PDF in `assets/materiali/codice-del-consumo-in-parole-semplici.pdf`.
-- **Webinar Exeen.** In `index.html` incolla il link YouTube nell'attributo `data-youtube-url` dell'articolo `#interventi` (vanno bene `youtube.com/watch?v=…`, `youtu.be/…`, `/live/…`). Finché è vuoto il riquadro mostra "Video in pubblicazione".
+- **Nuova edizione del libro.** Sostituisci i file in `assets/materiali/` (PDF ed EPUB) e la copertina in `assets/img/materiali/`, poi aggiorna in `index.html` la data del testo vigente e il numero di pagine.
+- **Video.** Il link YouTube sta nell'attributo `data-youtube-url` dell'articolo `#interventi` (vanno bene `youtube.com/watch?v=…`, `youtu.be/…`, `/live/…`). Se è vuoto il riquadro mostra "Video in pubblicazione".
 - **Nuovo materiale o intervento.** Duplica il blocco `<article class="material">` o `<article class="talk">`.
 
 ## Prima di andare online

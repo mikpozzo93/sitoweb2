@@ -284,19 +284,13 @@ em { font-style: normal; }
   align-items: center; padding: clamp(1.5rem, 1rem + 2vw, 3rem);
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
 }
-.book {
-  aspect-ratio: 3 / 4; border-radius: 4px 12px 12px 4px; padding: 1.4rem 1.2rem 1.2rem 1.6rem;
-  background: var(--band); color: #fff; position: relative; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: space-between;
-  box-shadow: inset 8px 0 0 rgb(0 0 0 / 0.18), var(--shadow-lg);
+.book-cover {
+  display: block; border-radius: 4px 10px 10px 4px; overflow: hidden;
+  box-shadow: inset 6px 0 0 rgb(0 0 0 / 0.18), var(--shadow-lg);
   transform: rotate(-2deg); transition: transform 0.5s var(--ease-out);
 }
-.material:hover .book { transform: rotate(0deg) translateY(-4px); }
-.book-ref { font: 700 0.75rem/1.3 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--on-band-2); }
-.book-title { font-size: 1.6rem; line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; }
-.book-title span { display: block; color: var(--ins-band); }
-.book-author { font: 0.8rem/1.3 var(--f-mono); color: var(--on-band-2); }
-.book-art { position: absolute; right: -30px; top: 40%; width: 150px; height: 150px; opacity: 0.18; }
+.book-cover img { width: 100%; height: auto; }
+.material:hover .book-cover { transform: rotate(0deg) translateY(-4px); }
 .material-body { display: grid; gap: var(--s-4); }
 .material-meta { display: flex; flex-wrap: wrap; gap: var(--s-2); }
 .material-meta li { font: var(--t-xs)/1 var(--f-mono); padding: 0.45rem 0.7rem; border-radius: 999px; background: var(--paper-2); }
@@ -305,10 +299,11 @@ em { font-style: normal; }
 .material-body ul.inside svg { width: 20px; height: 20px; flex: none; color: var(--accent); }
 .material-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-2); }
 .material-title { font-size: var(--t-xl); letter-spacing: -0.01em; }
+.material-title span { display: block; color: var(--accent); }
 .disclaimer { font-size: var(--t-xs); color: var(--ink-2); }
 @media (max-width: 760px) {
   .material { grid-template-columns: 1fr; }
-  .book { max-width: 240px; }
+  .book-cover { max-width: 240px; }
 }
 
 /* ---------- Talks ---------- */
