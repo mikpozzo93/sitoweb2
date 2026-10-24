@@ -1,20 +1,28 @@
-# Legal Product Studio
+# Michele Pozzo
 
-> Studio italiano di legal product design (apertura imminente). Porta il giurista designer dentro i team di prodotto digitali per progettare servizi trasparenti, etici e conformi a GDPR, AI Act, European Accessibility Act, Digital Services Act e Codice del Consumo. Motto: "Law, by design."
+> Sito personale dell'Avv. Michele Pozzo, avvocato, product manager e legal designer. Porta il diritto dentro le scelte di prodotto digitale e riscrive le regole perché le persone le capiscano. Base nel Vicentino.
 
-## Servizi
+## Profilo
 
-- Legal Copilot in-product: un giurista designer integrato negli sprint, dal primo wireframe al rilascio.
-- Legal design di privacy policy, termini e condizioni e cookie banner: contenuti chiari, a più livelli, integrati nell'esperienza d'uso.
-- AI Act, FRIA e Value Sensitive Design: classificazione del rischio dei sistemi di AI e valutazione d'impatto sui diritti fondamentali.
-- Accessibilità digitale ed European Accessibility Act: audit WCAG 2.2 e piano di adeguamento.
-- Fair Pattern Audit: individuazione dei dark pattern e riprogettazione in fair pattern.
+- Avvocato, con formazione in diritto delle nuove tecnologie.
+- 10 anni di product management digitale, gli ultimi 5 su servizi pubblici usati da milioni di persone.
+- Esperienza su identità digitale, servizi fiduciari e privacy, con rapporti diretti con autorità di controllo.
+- Relatore a Exeen Talks (giugno 2026).
 
-## Per chi
+## Temi
 
-Startup e scale-up SaaS, fintech e insurtech, e-commerce, healthtech, PMI che digitalizzano i servizi, team prodotto di grandi aziende.
+Privacy by design (GDPR), AI Act, accessibilità (European Accessibility Act, WCAG 2.2), dark e fair pattern (DSA, Codice del Consumo), diritti dei consumatori, identità digitale (eIDAS).
+
+## Materiali
+
+- Il Codice del Consumo in parole semplici: ebook gratuito in PDF accessibile. https://www.legalproductstudio.tech/#materiali
+
+## Interventi
+
+- Exeen Talks, webinar, giugno 2026: come la compliance entra nelle scelte di prodotto. https://www.legalproductstudio.tech/#interventi
 
 ## Contatti
 
 - Sito: https://www.legalproductstudio.tech/
 - Email: ciao@legalproductstudio.tech
+- LinkedIn: https://www.linkedin.com/in/michelepozzo/
