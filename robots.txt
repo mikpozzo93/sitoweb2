@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.legalproductstudio.tech/sitemap.xml
+Sitemap: https://mikpozzo93.github.io/sitoweb2/sitemap.xml
