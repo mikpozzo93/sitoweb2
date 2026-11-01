@@ -45,6 +45,6 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 
 ## Prima di andare online
 
-1. **Dati professionali.** Nel footer sostituisci `[Foro]` con l'Ordine di iscrizione e `P.IVA 00000000000`.
-2. **Email.** Verifica che `ciao@legalproductstudio.tech` sia l'indirizzo giusto (compare in `index.html` e `llms.txt`).
-3. **Dominio.** `CNAME` punta ancora a `www.legalproductstudio.tech`. Se passi a un dominio personale, aggiorna `CNAME` e gli URL assoluti in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
+1. **Dati professionali.** Il footer mostra solo il nome: aggiungi l'Ordine di iscrizione e la partita IVA.
+2. **Contatti.** Per ora l'unico contatto è LinkedIn. Quando una casella email è attiva, aggiungila nella sezione `#contatti`, nei dati strutturati (`"email"`) e in `llms.txt`.
+3. **Dominio.** Il sito è pubblicato su GitHub Pages all'indirizzo `https://mikpozzo93.github.io/sitoweb2/`, senza file `CNAME`. Per un dominio personale: configura i DNS, aggiungi `CNAME` con il nome del dominio e sostituisci l'URL in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.

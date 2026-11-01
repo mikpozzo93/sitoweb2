@@ -350,7 +350,6 @@ em { font-style: normal; }
 .contact .lead { color: var(--on-band-2); margin-top: var(--s-4); }
 .contact-actions { display: grid; gap: var(--s-3); justify-items: start; }
 .contact-actions .btn { width: 100%; }
-.contact-mail { font: 700 var(--t-lg)/1.2 var(--f-mono); color: #fff; word-break: break-all; }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Footer ---------- */
