@@ -72,7 +72,7 @@
     if (!id) {
       play.disabled = true;
       label.textContent = 'Video in pubblicazione';
-      link.parentElement.hidden = true;
+      link.hidden = true;
       return;
     }
     link.href = url;
@@ -86,6 +86,21 @@
       iframe.focus();
     });
   });
+
+  // ---------- Swipeable rows on phones ----------
+  // The crafts and topics lists scroll sideways on small screens. When they
+  // do, make them reachable with the keyboard so the arrow keys scroll them.
+  var rows = document.querySelectorAll('[data-carousel]');
+  var syncRows = function () {
+    rows.forEach(function (row) {
+      if (row.scrollWidth > row.clientWidth + 1) row.setAttribute('tabindex', '0');
+      else row.removeAttribute('tabindex');
+    });
+  };
+  if (rows.length) {
+    syncRows();
+    window.addEventListener('resize', syncRows, { passive: true });
+  }
 
   // ---------- Footer year ----------
   var year = document.querySelector('[data-year]');

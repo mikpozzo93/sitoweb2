@@ -1,0 +1,204 @@
+/* ==========================================================================
+   Lettore delle guide (lettore.html). Uses the tokens from site.css.
+   Pages render with PDF.js on a canvas, with a transparent text layer on top
+   for selection and search, and link overlays for the table of contents.
+   ========================================================================== */
+
+.reader-body {
+  --bar-h: 60px;
+  --tools-h: 64px;
+  --page-gap: 16px;
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
+  background: var(--paper-2);
+}
+
+/* ---------- Top bar ---------- */
+.reader-bar {
+  display: flex; align-items: center; gap: var(--s-3);
+  min-height: var(--bar-h);
+  padding: var(--s-2) max(1rem, env(safe-area-inset-right)) var(--s-2) max(1rem, env(safe-area-inset-left));
+  background: var(--paper); border-bottom: 1px solid var(--line);
+  z-index: 10;
+}
+.reader-back {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  min-height: 44px; padding: 0 var(--s-3) 0 var(--s-2); border-radius: 999px;
+  color: var(--ink); text-decoration: none; font-weight: 700; font-size: var(--t-sm);
+  flex: none;
+}
+.reader-back:hover { background: var(--paper-2); }
+.reader-back svg { width: 22px; height: 22px; }
+.reader-title {
+  flex: 1; min-width: 0;
+  font-size: var(--t-md); font-weight: 700; line-height: 1.25;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.reader-bar-actions { display: flex; gap: var(--s-2); flex: none; }
+.reader-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);
+  min-height: 44px; min-width: 44px; padding: 0 var(--s-4);
+  border-radius: 999px; border: 1.5px solid var(--ink); background: var(--surface); color: var(--ink);
+  font: 700 var(--t-sm)/1 var(--f-body); text-decoration: none; cursor: pointer;
+}
+.reader-btn svg { width: 20px; height: 20px; flex: none; }
+.reader-btn:hover { background: var(--ink); color: #fff; }
+.reader-btn[disabled] { opacity: 0.45; cursor: default; background: var(--surface); color: var(--ink); }
+.reader-btn--primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.reader-btn--primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+
+@media (max-width: 720px) {
+  .reader-body { --bar-h: 56px; }
+  .reader-back span, .reader-btn span { display: none; }
+  .reader-back { padding: 0; width: 44px; justify-content: center; }
+  .reader-btn { padding: 0; width: 44px; }
+  .reader-title { font-size: var(--t-sm); }
+}
+
+/* ---------- Viewer ---------- */
+.viewer {
+  position: relative;
+  min-width: 0; min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+}
+.pages {
+  display: grid; justify-items: center; gap: var(--page-gap);
+  width: max-content; min-width: 100%;
+  padding: var(--page-gap) var(--page-gap) calc(var(--tools-h) + 2 * var(--page-gap) + env(safe-area-inset-bottom));
+}
+.page {
+  position: relative;
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 2px;
+  overflow: hidden;
+  scroll-margin-top: var(--page-gap);
+}
+.page canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.page-num {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  font: var(--t-sm)/1 var(--f-mono); color: var(--ink-2);
+}
+.page.is-rendered .page-num { display: none; }
+
+/* Link overlays (table of contents, cross references) */
+.link-layer { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.link-layer a { position: absolute; pointer-events: auto; border-radius: 3px; }
+.link-layer a:hover { background: rgb(43 54 217 / 0.08); }
+.link-layer a:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+
+/* ---------- Status ---------- */
+.viewer-status {
+  position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: var(--s-4);
+  padding: var(--s-6); text-align: center; color: var(--ink-2);
+}
+.viewer-status[hidden] { display: none; }
+.viewer-status a { font-weight: 700; }
+.spinner {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 3px solid var(--line); border-top-color: var(--accent);
+  animation: spin 0.9s linear infinite;
+}
+.viewer-status.is-error .spinner { display: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Bottom tools ---------- */
+.reader-tools {
+  position: fixed; z-index: 20;
+  left: 50%; bottom: calc(var(--s-4) + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: var(--s-2);
+  padding: 6px; border-radius: 999px;
+  background: var(--ink); color: #fff;
+  box-shadow: var(--shadow-lg);
+}
+.reader-tools[hidden] { display: none; }
+.tool-group { display: flex; align-items: center; gap: 2px; }
+.tool-group + .tool-group { padding-left: var(--s-2); border-left: 1px solid rgb(255 255 255 / 0.2); }
+.tool-btn {
+  width: 44px; height: 44px; border: 0; border-radius: 50%;
+  display: grid; place-items: center;
+  background: transparent; color: inherit; cursor: pointer;
+}
+.tool-btn svg { width: 22px; height: 22px; }
+.tool-btn:hover { background: rgb(255 255 255 / 0.14); }
+.tool-btn[disabled] { opacity: 0.4; cursor: default; background: transparent; }
+.reader-tools :focus-visible { outline-color: var(--ins-band); }
+.page-field { display: flex; align-items: center; gap: 6px; font: 700 var(--t-sm)/1 var(--f-mono); }
+.page-field input {
+  width: 3.2ch; min-height: 36px; padding: 0 4px; border-radius: 8px; border: 1.5px solid rgb(255 255 255 / 0.5);
+  background: transparent; color: #fff; font: inherit; text-align: center;
+  box-sizing: content-box;
+}
+.page-field input:focus { border-color: var(--ins-band); outline: none; }
+.page-total { color: #C3C7E6; white-space: nowrap; }
+.tool-zoom {
+  min-width: 60px; height: 44px; padding: 0 var(--s-2); border: 0; border-radius: 999px;
+  background: transparent; color: #fff; cursor: pointer;
+  font: 700 var(--t-xs)/1 var(--f-mono);
+}
+.tool-zoom:hover { background: rgb(255 255 255 / 0.14); }
+
+/* The toolbar sits over the bottom of the page: keep it compact on phones. */
+@media (max-width: 420px) {
+  .reader-tools { gap: 4px; padding: 4px; }
+  .tool-group + .tool-group { padding-left: 4px; }
+  .tool-btn { width: 40px; height: 40px; }
+  .tool-zoom { min-width: 50px; height: 40px; }
+}
+
+/* ---------- Table of contents ---------- */
+.toc {
+  margin: 0 0 0 auto; height: 100dvh; max-height: none;
+  width: min(420px, 100vw); padding: 0; border: 0;
+  background: var(--paper); color: var(--ink);
+  box-shadow: var(--shadow-lg);
+}
+.toc::backdrop { background: rgb(14 17 53 / 0.45); }
+.toc[open] { display: grid; grid-template-rows: auto 1fr; }
+.toc-head {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s-3);
+  padding: var(--s-3) var(--s-3) var(--s-3) var(--s-5); border-bottom: 1px solid var(--line);
+}
+.toc-head h2 { font-size: var(--t-lg); }
+.toc-head .tool-btn { color: var(--ink); }
+.toc-head .tool-btn:hover { background: var(--paper-2); }
+.toc nav { overflow: auto; padding: var(--s-3) var(--s-3) calc(var(--s-6) + env(safe-area-inset-bottom)); }
+.toc-list, .toc-list ol { list-style: none; margin: 0; padding: 0; }
+.toc-list ol { padding-left: var(--s-4); }
+.toc-list a {
+  display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4);
+  padding: var(--s-3); border-radius: var(--radius-sm);
+  color: var(--ink); text-decoration: none; font-weight: 600; line-height: 1.35;
+}
+.toc-list ol a { font-weight: 400; color: var(--ink-2); font-size: var(--t-sm); }
+.toc-list a:hover { background: var(--paper-2); }
+.toc-list a[aria-current="true"] { background: var(--paper-2); box-shadow: inset 3px 0 0 var(--accent); }
+.toc-page { font: var(--t-xs)/1 var(--f-mono); color: var(--ink-2); flex: none; }
+
+.reader-noscript { padding: var(--s-6); text-align: center; }
+
+/* ---------- Text layer (from PDF.js pdf_viewer.css, Apache 2.0) ---------- */
+.textLayer {
+  position: absolute; text-align: initial; inset: 0; overflow: clip; opacity: 1; line-height: 1;
+  -webkit-text-size-adjust: none; text-size-adjust: none; forced-color-adjust: none;
+  transform-origin: 0 0; caret-color: CanvasText; z-index: 2;
+}
+.textLayer :is(span, br) {
+  color: transparent; position: absolute; white-space: pre; cursor: text; transform-origin: 0% 0%;
+}
+.textLayer > :not(.markedContent), .textLayer .markedContent span:not(.markedContent) { z-index: 1; }
+.textLayer span.markedContent { top: 0; height: 0; }
+.textLayer span[role="img"] { -webkit-user-select: none; user-select: none; cursor: default; }
+.textLayer ::selection { background: rgb(43 54 217 / 0.25); }
+.textLayer br::selection { background: transparent; }
+.textLayer .endOfContent {
+  display: block; position: absolute; inset: 100% 0 0; z-index: 0; cursor: default; -webkit-user-select: none; user-select: none;
+}
+.textLayer.selecting .endOfContent { top: 0; }

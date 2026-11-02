@@ -366,3 +366,58 @@ em { font-style: normal; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Talk actions, touch targets ---------- */
+.talk-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.talk-actions [hidden] { display: none; }
+.brand { min-height: 44px; }
+.footer-top { display: inline-block; padding-block: 12px; margin-block: -12px; }
+
+/* ==========================================================================
+   Phones and small tablets: a shorter page.
+   ========================================================================== */
+@media (max-width: 860px) {
+  /* Hero: a small round portrait next to the name instead of a full screen photo */
+  .hero { padding-block: var(--s-6) var(--s-8); }
+  .hero-grid { grid-template-columns: 1fr auto; gap: var(--s-5) var(--s-4); align-items: center; }
+  .hero-copy { display: contents; }
+  .hero-copy > * { grid-column: 1 / -1; }
+  .hero-copy > .eyebrow { grid-column: 1; grid-row: 1; }
+  .portrait { grid-column: 2; grid-row: 1; width: 88px; max-width: none; margin: 0; }
+  .portrait-frame { aspect-ratio: 1; border-radius: 50%; box-shadow: var(--shadow); }
+  .portrait-frame img { object-position: 50% 16%; }
+
+  /* About: no second photo, key facts as a plain list */
+  .about-photo { display: none; }
+  .facts { gap: 0; margin-top: 0; }
+  .facts li { padding: var(--s-2) 0; background: none; border: 0; border-radius: 0; }
+}
+
+@media (max-width: 760px) {
+  /* Materials: small cover next to the title, details on one line */
+  .material { grid-template-columns: 96px 1fr; gap: var(--s-4); align-items: center; }
+  .material-body { display: contents; }
+  .book-cover { grid-column: 1; grid-row: 1; max-width: none; transform: none; box-shadow: var(--shadow); }
+  .material:hover .book-cover { transform: none; }
+  .material-title { grid-column: 2; grid-row: 1; font-size: var(--t-lg); }
+  .material-body > :not(.material-title) { grid-column: 1 / -1; }
+  .material-meta { gap: 0 0.5em; }
+  .material-meta li { background: none; padding: 0; border-radius: 0; line-height: 1.6; color: var(--ink-2); white-space: nowrap; }
+  .material-meta li:not(:last-child)::after { content: "·"; margin-left: 0.5em; }
+}
+
+@media (max-width: 700px) {
+  /* Crafts and topics: a row of cards to swipe, with the next one peeking in */
+  .crafts, .topics {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 84%;
+    gap: var(--s-3);
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 1rem;
+    margin-inline: -1rem; padding: 4px 1rem var(--s-4);
+    scrollbar-width: thin;
+  }
+  .crafts > li, .topics > li { scroll-snap-align: start; }
+  .crafts .reveal, .topics .reveal { opacity: 1; transform: none; }
+  .craft { padding: var(--s-5); }
+  .topic:hover { transform: none; box-shadow: none; }
+}
