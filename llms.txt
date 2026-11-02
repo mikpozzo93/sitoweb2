@@ -1,6 +1,6 @@
 # Michele Pozzo
 
-> Sito personale dell'Avv. Michele Pozzo, avvocato, product manager e legal designer. Porta il diritto dentro le scelte di prodotto digitale e riscrive le regole perché le persone le capiscano. Base nel Vicentino.
+> Sito personale dell'Avv. Michele Pozzo, avvocato, business designer e legal designer. Porta il diritto dentro le scelte di prodotto digitale al momento giusto e con il linguaggio del destinatario. Base nel Vicentino.
 
 ## Profilo
 
@@ -23,5 +23,6 @@ Privacy by design (GDPR), AI Act, accessibilità (European Accessibility Act, WC
 
 ## Contatti
 
+- Email: ciao@michelepozzo.digital
 - Sito: https://mikpozzo93.github.io/sitoweb2/
 - LinkedIn: https://www.linkedin.com/in/michelepozzo/

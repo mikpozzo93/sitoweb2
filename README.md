@@ -1,4 +1,4 @@
-# Michele Pozzo · Avvocato, product manager, legal designer
+# Michele Pozzo · Avvocato, business designer, legal designer
 
 Sito personale di Michele Pozzo. Statico, senza build e senza dipendenze: HTML, CSS e JavaScript puri. Nessun cookie, nessun tracciamento, nessuna risorsa di terze parti (il video YouTube si carica solo al clic).
 
@@ -30,12 +30,12 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 | Ancora | Contenuto |
 | --- | --- |
 | `#top` | Hero con ritratto e i tre mestieri |
-| (senza ancora) | Tre mestieri, un solo lavoro: avvocato, product manager, legal designer |
+| (senza ancora) | Tre mestieri, un solo lavoro: avvocato, business designer, legal designer |
 | `#chi-sono` | Biografia, punti chiave e "cosa non sono" |
 | `#temi` | Di cosa mi occupo: GDPR, AI Act, accessibilità, dark pattern, consumatori, identità digitale |
 | `#materiali` | I miei materiali: "Acquistare in tranquillità", guida al Codice del Consumo in PDF ed EPUB |
 | `#interventi` | I miei interventi: webinar Exeen Talks, invito a intervenire come relatore |
-| `#contatti` | Email e LinkedIn |
+| `#contatti` | Email (ciao@michelepozzo.digital) e LinkedIn |
 
 ## Aggiungere contenuti
 
@@ -46,5 +46,4 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 ## Prima di andare online
 
 1. **Dati professionali.** Il footer mostra solo il nome: aggiungi l'Ordine di iscrizione e la partita IVA.
-2. **Contatti.** Per ora l'unico contatto è LinkedIn. Quando una casella email è attiva, aggiungila nella sezione `#contatti`, nei dati strutturati (`"email"`) e in `llms.txt`.
-3. **Dominio.** Il sito è pubblicato su GitHub Pages all'indirizzo `https://mikpozzo93.github.io/sitoweb2/`, senza file `CNAME`. Per un dominio personale: configura i DNS, aggiungi `CNAME` con il nome del dominio e sostituisci l'URL in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
+2. **Dominio.** Il sito è pubblicato su GitHub Pages all'indirizzo `https://mikpozzo93.github.io/sitoweb2/`, senza file `CNAME`. Per un dominio personale: configura i DNS, aggiungi `CNAME` con il nome del dominio e sostituisci l'URL in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
