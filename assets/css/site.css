@@ -340,6 +340,10 @@ em { font-style: normal; }
 .contact .lead { color: var(--on-band-2); margin-top: var(--s-4); }
 .contact-actions { display: grid; gap: var(--s-3); justify-items: start; }
 .contact-actions .btn { width: 100%; }
+.mail-help:empty { display: none; }
+.mail-help { color: var(--on-band); font-size: var(--t-sm); background: rgb(255 255 255 / 0.12); padding: var(--s-3) var(--s-4); border-radius: var(--radius-sm); }
+.mail-alt { color: var(--on-band-2); font-size: var(--t-sm); }
+.mail-alt a { color: var(--ins-band); font-weight: 700; display: inline-block; padding-block: 10px; margin-block: -10px; }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Footer ---------- */

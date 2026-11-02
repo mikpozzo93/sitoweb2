@@ -102,6 +102,27 @@
     window.addEventListener('resize', syncRows, { passive: true });
   }
 
+  // ---------- Email button ----------
+  // mailto: opens the visitor's mail app only if one is set up. Copy the
+  // address too, and say so, so the click is never a dead end.
+  var mail = document.querySelector('[data-mail]');
+  var help = document.querySelector('[data-mail-help]');
+  if (mail && help) {
+    mail.addEventListener('click', function () {
+      var addr = mail.getAttribute('data-mail');
+      var done = function (copied) {
+        help.textContent = copied
+          ? 'Se non si è aperta la tua app di posta, ho copiato l\'indirizzo ' + addr + ': incollalo in una nuova email.'
+          : 'Se non si è aperta la tua app di posta, scrivimi a ' + addr + '.';
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(function () { done(true); }, function () { done(false); });
+      } else {
+        done(false);
+      }
+    });
+  }
+
   // ---------- Footer year ----------
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
