@@ -8,6 +8,10 @@ Atti del Webinar & Guida Pratica al Legal Design, Value Sensitive Design e Compl
 
 Legal design · UX · Compliance
 
+Nota sulla realizzazione
+
+Questa guida è stata realizzata con strumenti di intelligenza artificiale ed è stata progettata dal Legal Designer **Michele Pozzo**.
+
 # Come usare questa guida
 
 Questa guida raccoglie gli atti del webinar **“The Legal Mind Within Digital Product Design”** e li trasforma in uno strumento di lavoro. È scritta per chi costruisce prodotti digitali: product owner, designer, sviluppatori, persone del business e, naturalmente, giuristi.

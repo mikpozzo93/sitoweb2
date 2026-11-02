@@ -267,6 +267,6 @@ dl.glossary dd { margin: 2px 0 0; }
 nav.toc { break-before: page; }
 nav.toc h2 { font-size: 32px !important; margin: 0 0 16px !important; }
 nav.toc li { padding: 12px 0 !important; }
-.legend { grid-template-columns: 1fr !important; }
+.legend { grid-template-columns: 1fr 1fr !important; }
 .box.takeaway, .box.warn, .box.manifesto, .box.designer { break-inside: avoid; }
 .legend .box { break-inside: avoid; }
