@@ -362,6 +362,41 @@ em { font-style: normal; }
 .talk-actions [hidden] { display: none; }
 .footer-top { display: inline-block; padding-block: 12px; margin-block: -12px; }
 
+/* ---------- Materials and talks, side by side on wide screens ---------- */
+.duo { padding-block: var(--s-9); }
+.duo-grid { display: grid; gap: var(--s-9); }
+.duo-col .section-head { margin-bottom: var(--s-6); }
+
+/* Compact guide card: small cover next to the title */
+.duo .material { grid-template-columns: 120px 1fr; gap: var(--s-4) var(--s-5); align-items: center; padding: clamp(1.25rem, 1rem + 1vw, 2rem); }
+.duo .material-body { display: contents; }
+.duo .book-cover { grid-column: 1; grid-row: 1; max-width: none; transform: none; box-shadow: var(--shadow); }
+.duo .material:hover .book-cover { transform: translateY(-2px); }
+.duo .material-title { grid-column: 2; grid-row: 1; font-size: var(--t-lg); }
+.duo .material-body > :not(.material-title) { grid-column: 1 / -1; }
+
+/* Talk as a card with the video on top */
+.duo .talk {
+  grid-template-columns: 1fr; gap: var(--s-5); align-items: start; align-content: start;
+  padding: clamp(1.25rem, 1rem + 1vw, 2rem);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.duo .talk-more { margin-top: var(--s-5); }
+@media (max-width: 600px) {
+  .duo .material, .duo .talk { padding: var(--s-4); }
+  .duo .video { aspect-ratio: auto; width: 100%; height: max(220px, calc((100vw - 4rem) * 9 / 16)); }
+  .duo .video-poster { padding: var(--s-4); }
+}
+
+@media (min-width: 1000px) {
+  .duo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; gap: 0 clamp(2rem, 1rem + 2vw, 3.5rem); }
+  /* Subgrid lines up the two headings and the two cards */
+  .duo-col { display: grid; grid-row: span 3; grid-template-rows: subgrid; align-content: start; }
+  .duo-col > .section-head { margin-bottom: var(--s-6); }
+  .duo .h2 { font-size: clamp(1.8rem, 1.2rem + 1.4vw, 2.5rem); }
+  .duo .section-head .lead { font-size: var(--t-md); }
+}
+
 /* ==========================================================================
    Phones and small tablets: a shorter page.
    ========================================================================== */
