@@ -1,4 +1,4 @@
-# Michele Pozzo · Avvocato, business designer, legal designer
+# Michele Pozzo · Avvocato, legal designer
 
 Sito personale di Michele Pozzo. Statico, senza build e senza dipendenze: HTML, CSS e JavaScript puri. Nessun cookie, nessun tracciamento, nessuna risorsa di terze parti (il video YouTube si carica solo al clic).
 
@@ -29,8 +29,8 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 
 | Ancora | Contenuto |
 | --- | --- |
-| `#top` | Hero con ritratto e i tre mestieri |
-| (senza ancora) | Tre mestieri, un solo lavoro: avvocato, business designer, legal designer |
+| `#top` | Hero con ritratto e i due mestieri |
+| (senza ancora) | Tre competenze, un solo lavoro: avvocato, esperienza di prodotto, legal designer |
 | `#chi-sono` | Biografia, punti chiave e "cosa non sono" |
 | `#temi` | Di cosa mi occupo: GDPR, AI Act, accessibilità, dark pattern, consumatori, identità digitale |
 | `#materiali` | I miei materiali: "Il Giurista Designer nel Prodotto", guida in PDF tratta dal webinar Exeen Talks |
