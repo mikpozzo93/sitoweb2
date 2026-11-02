@@ -20,7 +20,7 @@ assets/fonts/              Atkinson Hyperlegible Next e Mono (licenza SIL OFL)
 assets/img/foto/           ritratti (WebP con JPEG di riserva)
 assets/img/materiali/      copertine dei materiali
 assets/img/og-image.png    anteprima per i social (1200×630)
-assets/materiali/          libro in PDF ed EPUB
+assets/materiali/          guide in PDF
 robots.txt, sitemap.xml    file per i motori di ricerca
 llms.txt                   sintesi per i motori di risposta basati su AI
 ```
@@ -33,13 +33,13 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 | (senza ancora) | Tre mestieri, un solo lavoro: avvocato, business designer, legal designer |
 | `#chi-sono` | Biografia, punti chiave e "cosa non sono" |
 | `#temi` | Di cosa mi occupo: GDPR, AI Act, accessibilità, dark pattern, consumatori, identità digitale |
-| `#materiali` | I miei materiali: "Acquistare in tranquillità", guida al Codice del Consumo in PDF ed EPUB |
+| `#materiali` | I miei materiali: "Il Giurista Designer nel Prodotto", guida in PDF tratta dal webinar Exeen Talks |
 | `#interventi` | I miei interventi: webinar Exeen Talks, invito a intervenire come relatore |
 | `#contatti` | Email (ciao@michelepozzo.digital) e LinkedIn |
 
 ## Aggiungere contenuti
 
-- **Nuova edizione del libro.** Sostituisci i file in `assets/materiali/` (PDF ed EPUB) e la copertina in `assets/img/materiali/`, poi aggiorna in `index.html` la data del testo vigente e il numero di pagine.
+- **Nuova edizione della guida.** Sostituisci il PDF in `assets/materiali/` e la copertina in `assets/img/materiali/` (600×800, JPEG e WebP), poi aggiorna in `index.html` l'edizione, il numero di pagine e i dati strutturati.
 - **Video.** Il link YouTube sta nell'attributo `data-youtube-url` dell'articolo `#interventi` (vanno bene `youtube.com/watch?v=…`, `youtu.be/…`, `/live/…`). Se è vuoto il riquadro mostra "Video in pubblicazione".
 - **Nuovo materiale o intervento.** Duplica il blocco `<article class="material">` o `<article class="talk">`.
 

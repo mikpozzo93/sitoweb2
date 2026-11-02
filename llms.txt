@@ -15,7 +15,7 @@ Privacy by design (GDPR), AI Act, accessibilità (European Accessibility Act, WC
 
 ## Materiali
 
-- Acquistare in tranquillità. Una guida sul Codice del Consumo: ebook gratuito (PDF di 88 pagine ed EPUB), testo vigente al 23 ottobre 2026. Spiega in linguaggio semplice tutti gli articoli del D.Lgs. 206/2005 in 16 capitoli. Realizzata con l'intelligenza artificiale, progettata dal legal designer Michele Pozzo. https://mikpozzo93.github.io/sitoweb2/#materiali
+- Il Giurista Designer nel Prodotto (The Legal Mind Within Digital Product Design): guida gratuita in PDF di 36 pagine, edizione novembre 2026. Raccoglie gli atti del webinar Exeen Talks e li trasforma in una guida pratica al legal design, al Value Sensitive Design e alla compliance preventiva: team multidisciplinare, privacy e diritti fondamentali, trasparenza, accessibilità, AI Act e FRIA, traduzione dei requisiti legali in componenti d'interfaccia. Realizzata con l'intelligenza artificiale, progettata dal legal designer Michele Pozzo. https://mikpozzo93.github.io/sitoweb2/assets/materiali/il-giurista-designer-nel-prodotto.pdf
 
 ## Interventi
 
