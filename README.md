@@ -1,4 +1,4 @@
-# Michele Pozzo · Avvocato, product manager, legal designer
+# Michele Pozzo · Avvocato, business designer, legal designer
 
 Sito personale di Michele Pozzo. Statico, senza build e senza dipendenze: HTML, CSS e JavaScript puri. Nessun cookie, nessun tracciamento, nessuna risorsa di terze parti (il video YouTube si carica solo al clic).
 
@@ -20,7 +20,7 @@ assets/fonts/              Atkinson Hyperlegible Next e Mono (licenza SIL OFL)
 assets/img/foto/           ritratti (WebP con JPEG di riserva)
 assets/img/materiali/      copertine dei materiali
 assets/img/og-image.png    anteprima per i social (1200×630)
-assets/materiali/          libro in PDF ed EPUB
+assets/materiali/          guide in PDF
 robots.txt, sitemap.xml    file per i motori di ricerca
 llms.txt                   sintesi per i motori di risposta basati su AI
 ```
@@ -30,21 +30,20 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 | Ancora | Contenuto |
 | --- | --- |
 | `#top` | Hero con ritratto e i tre mestieri |
-| (senza ancora) | Tre mestieri, un solo lavoro: avvocato, product manager, legal designer |
+| (senza ancora) | Tre mestieri, un solo lavoro: avvocato, business designer, legal designer |
 | `#chi-sono` | Biografia, punti chiave e "cosa non sono" |
 | `#temi` | Di cosa mi occupo: GDPR, AI Act, accessibilità, dark pattern, consumatori, identità digitale |
-| `#materiali` | I miei materiali: "Acquistare in tranquillità", guida al Codice del Consumo in PDF ed EPUB |
+| `#materiali` | I miei materiali: "Il Giurista Designer nel Prodotto", guida in PDF tratta dal webinar Exeen Talks |
 | `#interventi` | I miei interventi: webinar Exeen Talks, invito a intervenire come relatore |
-| `#contatti` | Email e LinkedIn |
+| `#contatti` | Email (ciao@michelepozzo.digital) e LinkedIn |
 
 ## Aggiungere contenuti
 
-- **Nuova edizione del libro.** Sostituisci i file in `assets/materiali/` (PDF ed EPUB) e la copertina in `assets/img/materiali/`, poi aggiorna in `index.html` la data del testo vigente e il numero di pagine.
+- **Nuova edizione della guida.** Sostituisci il PDF in `assets/materiali/` e la copertina in `assets/img/materiali/` (600×800, JPEG e WebP), poi aggiorna in `index.html` l'edizione, il numero di pagine e i dati strutturati.
 - **Video.** Il link YouTube sta nell'attributo `data-youtube-url` dell'articolo `#interventi` (vanno bene `youtube.com/watch?v=…`, `youtu.be/…`, `/live/…`). Se è vuoto il riquadro mostra "Video in pubblicazione".
 - **Nuovo materiale o intervento.** Duplica il blocco `<article class="material">` o `<article class="talk">`.
 
 ## Prima di andare online
 
 1. **Dati professionali.** Il footer mostra solo il nome: aggiungi l'Ordine di iscrizione e la partita IVA.
-2. **Contatti.** Per ora l'unico contatto è LinkedIn. Quando una casella email è attiva, aggiungila nella sezione `#contatti`, nei dati strutturati (`"email"`) e in `llms.txt`.
-3. **Dominio.** Il sito è pubblicato su GitHub Pages all'indirizzo `https://mikpozzo93.github.io/sitoweb2/`, senza file `CNAME`. Per un dominio personale: configura i DNS, aggiungi `CNAME` con il nome del dominio e sostituisci l'URL in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
+2. **Dominio.** Il sito è pubblicato su GitHub Pages all'indirizzo `https://mikpozzo93.github.io/sitoweb2/`, senza file `CNAME`. Per un dominio personale: configura i DNS, aggiungi `CNAME` con il nome del dominio e sostituisci l'URL in `index.html`, `robots.txt`, `sitemap.xml` e `llms.txt`.
