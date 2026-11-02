@@ -138,16 +138,7 @@ em { font-style: normal; }
   transition: border-color 0.2s;
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
-.header-inner { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); }
-.brand { display: inline-flex; align-items: center; gap: var(--s-3); color: var(--ink); text-decoration: none; font-weight: 700; }
-.brand-mark {
-  width: 38px; height: 38px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--accent); color: #fff;
-  font: 700 0.95rem/1 var(--f-mono); letter-spacing: 0.02em;
-}
-.brand-text { display: grid; line-height: 1.15; }
-.brand-text small { font-family: var(--f-mono); font-weight: 400; font-size: 0.75rem; color: var(--ink-2); }
+.header-inner { height: var(--header-h); display: flex; align-items: center; justify-content: flex-end; gap: var(--s-4); }
 .nav ul { display: flex; gap: var(--s-2); }
 .nav a {
   display: block; padding: var(--s-2) var(--s-3); border-radius: 999px;
@@ -173,8 +164,7 @@ em { font-style: normal; }
   .nav.is-open { display: block; }
   .nav ul { flex-direction: column; }
   .nav a { padding: var(--s-3) var(--s-4); font-size: var(--t-md); }
-  .brand-text small { display: none; }
-}
+  }
 
 /* ---------- Hero ---------- */
 .hero { padding-block: clamp(2.5rem, 2rem + 4vw, 6rem) var(--s-9); }
@@ -370,7 +360,6 @@ em { font-style: normal; }
 /* ---------- Talk actions, touch targets ---------- */
 .talk-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 .talk-actions [hidden] { display: none; }
-.brand { min-height: 44px; }
 .footer-top { display: inline-block; padding-block: 12px; margin-block: -12px; }
 
 /* ==========================================================================
