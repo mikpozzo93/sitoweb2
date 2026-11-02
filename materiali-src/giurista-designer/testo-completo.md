@@ -4,7 +4,7 @@ Atti del webinar · Guida pratica · Edizione novembre 2026
 
 Atti del Webinar & Guida Pratica al Legal Design, Value Sensitive Design e Compliance Preventiva
 
-**Michele Pozzo**Avvocato, product manager, legal designer
+**Michele Pozzo**Avvocato, legal designer
 
 Legal design · UX · Compliance
 
