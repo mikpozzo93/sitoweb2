@@ -13,9 +13,13 @@ python3 -m http.server 8000
 
 ```
 index.html                 pagina unica
+lettore.html               lettore online delle guide (lettore.html?guida=<nome>)
 assets/css/fonts.css       @font-face dei caratteri ospitati in locale
 assets/css/site.css        design token e stili
 assets/js/site.js          menu mobile, comparsa al scroll, video YouTube al clic
+assets/css/lettore.css     stili del lettore
+assets/js/lettore.js       lettore: scorrimento, zoom, indice, link, pagina nell'URL
+assets/vendor/pdfjs/       PDF.js 4.10.38 (Mozilla, Apache 2.0), ospitato nel sito
 assets/fonts/              Atkinson Hyperlegible Next e Mono (licenza SIL OFL)
 assets/img/foto/           ritratti (WebP con JPEG di riserva)
 assets/img/materiali/      copertine dei materiali
@@ -40,6 +44,7 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 ## Aggiungere contenuti
 
 - **Nuova edizione della guida.** Sostituisci il PDF in `assets/materiali/` e la copertina in `assets/img/materiali/` (600×800, JPEG e WebP), poi aggiorna in `index.html` l'edizione, il numero di pagine e i dati strutturati.
+- **Nuova guida nel lettore.** Metti il PDF in `assets/materiali/` e aggiungi una voce in `GUIDES` all'inizio di `assets/js/lettore.js`. Il link è `lettore.html?guida=<nome>`, e `#pagina=N` apre una pagina precisa.
 - **Video.** Il link YouTube sta nell'attributo `data-youtube-url` dell'articolo `#interventi` (vanno bene `youtube.com/watch?v=…`, `youtu.be/…`, `/live/…`). Se è vuoto il riquadro mostra "Video in pubblicazione".
 - **Nuovo materiale o intervento.** Duplica il blocco `<article class="material">` o `<article class="talk">`.
 

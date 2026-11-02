@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Leggi la guida · Michele Pozzo</title>
+  <meta name="description" content="Lettore online delle guide gratuite di Michele Pozzo.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#F5F6FB">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/lettore.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body class="reader-body">
+<a class="skip-link" href="#viewer">Vai alle pagine</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M9 7h11M9 12h11M9 17h11M4.5 7h.01M4.5 12h.01M4.5 17h.01"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 15l6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 12h12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 12h12M12 6v12"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<header class="reader-bar">
+  <a class="reader-back" href="./#materiali">
+    <svg aria-hidden="true"><use href="#i-back"/></svg><span>Torna al sito</span>
+  </a>
+  <h1 class="reader-title" data-title>Guida</h1>
+  <div class="reader-bar-actions">
+    <button class="reader-btn" type="button" data-toc-open aria-haspopup="dialog" disabled>
+      <svg aria-hidden="true"><use href="#i-list"/></svg><span>Indice</span>
+    </button>
+    <a class="reader-btn reader-btn--primary" href="#" data-download download>
+      <svg aria-hidden="true"><use href="#i-download"/></svg><span>Scarica</span>
+    </a>
+  </div>
+</header>
+
+<p class="visually-hidden" data-a11y-note>
+  Questo lettore mostra le pagine della guida come immagini con il testo selezionabile.
+  Con un lettore di schermo è più comodo il PDF taggato, con titoli e segnalibri:
+  <a href="#" data-download-alt>scarica il PDF</a>.
+</p>
+
+<main class="viewer" id="viewer" tabindex="-1" aria-label="Pagine della guida">
+  <div class="viewer-status" data-status role="status">
+    <span class="spinner" aria-hidden="true"></span>
+    <span data-status-text>Sto caricando la guida…</span>
+  </div>
+  <div class="pages" data-pages></div>
+</main>
+
+<nav class="reader-tools" aria-label="Navigazione e zoom" hidden data-tools>
+  <div class="tool-group">
+    <button class="tool-btn" type="button" data-prev aria-label="Pagina precedente"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+    <label class="page-field">
+      <span class="visually-hidden">Vai alla pagina</span>
+      <input type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" data-page-input value="1">
+      <span class="page-total" aria-hidden="true">/ <span data-page-count>1</span></span>
+    </label>
+    <button class="tool-btn" type="button" data-next aria-label="Pagina successiva"><svg aria-hidden="true"><use href="#i-down"/></svg></button>
+  </div>
+  <div class="tool-group">
+    <button class="tool-btn" type="button" data-zoom-out aria-label="Riduci"><svg aria-hidden="true"><use href="#i-minus"/></svg></button>
+    <button class="tool-zoom" type="button" data-zoom-fit aria-label="Adatta alla larghezza">100%</button>
+    <button class="tool-btn" type="button" data-zoom-in aria-label="Ingrandisci"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+  </div>
+  <p class="visually-hidden" aria-live="polite" data-live></p>
+</nav>
+
+<dialog class="toc" data-toc aria-labelledby="toc-title">
+  <div class="toc-head">
+    <h2 id="toc-title">Indice</h2>
+    <button class="tool-btn" type="button" data-toc-close aria-label="Chiudi l'indice"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <nav aria-labelledby="toc-title"><ol class="toc-list" data-toc-list></ol></nav>
+</dialog>
+
+<noscript>
+  <p class="reader-noscript">Per sfogliare la guida qui serve JavaScript. Puoi comunque <a href="assets/materiali/il-giurista-designer-nel-prodotto.pdf">aprire il PDF</a>.</p>
+</noscript>
+
+<script type="module" src="assets/js/lettore.js"></script>
+</body>
+</html>
