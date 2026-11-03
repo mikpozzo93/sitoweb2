@@ -443,11 +443,10 @@ em { font-style: normal; }
 @media (max-width: 860px) {
   /* Hero: a small round portrait next to the name instead of a full screen photo */
   .hero { padding-block: var(--s-6) var(--s-8); }
-  .hero-grid { grid-template-columns: 1fr auto; gap: var(--s-5) var(--s-4); align-items: center; }
+  .hero-grid { grid-template-columns: 1fr; gap: var(--s-5); align-items: center; }
   .hero-copy { display: contents; }
-  .hero-copy > * { grid-column: 1 / -1; }
-  .hero-copy > .eyebrow { grid-column: 1; grid-row: 1; }
-  .portrait { grid-column: 2; grid-row: 1; width: 88px; max-width: none; margin: 0; }
+  .hero-copy > * { grid-column: 1; }
+  .portrait { grid-column: 1; grid-row: 1; width: 88px; max-width: none; margin: 0; }
   .portrait-frame { aspect-ratio: 1; border-radius: 50%; box-shadow: var(--shadow); }
   .portrait-frame img { object-position: 50% 16%; }
 
