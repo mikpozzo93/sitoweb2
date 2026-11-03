@@ -116,6 +116,20 @@
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Avv. Michele Pozzo, Legal Designer: torna all'inizio">
+      <svg class="brand-logo" viewBox="24 28 548 104" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="logo-g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#0E1135"/>
+            <stop offset="1" stop-color="#2B36D9"/>
+          </linearGradient>
+        </defs>
+        <path d="M24,28 H76 A52,52 0 0 1 76,132 H24 Z" fill="url(#logo-g)"/>
+        <text x="152" y="88" font-family="'Atkinson Hyperlegible Next','Helvetica Neue',Arial,sans-serif" font-size="50" letter-spacing="-1" fill="#0E1135"><tspan font-weight="400">Avv.</tspan><tspan font-weight="700" dx="12">Michele Pozzo</tspan></text>
+        <rect x="152" y="102" width="238" height="30" rx="3" fill="#FFE680"/>
+        <text x="164" y="123" font-family="'Atkinson Hyperlegible Mono','Courier New',monospace" font-size="17" font-weight="500" letter-spacing="5" fill="#0E1135">LEGAL DESIGNER</text>
+      </svg>
+    </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu">
       <svg aria-hidden="true"><use href="#i-menu"/></svg>
     </button>
@@ -137,8 +151,7 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Avv. Michele Pozzo</p>
-        <h1 class="hero-title" id="hero-title">Il diritto, progettato per chi lo deve <span class="strike">subire</span> <ins>usare</ins>.</h1>
+        <h1 class="hero-title" id="hero-title">Il diritto, progettato per chi lo deve <span class="strike" aria-hidden="true">subire</span> <ins>usare</ins><span class="visually-hidden">, non subire</span>.</h1>
         <p class="lead">Sono avvocato e da quasi dieci anni lavoro nel product management di prodotti digitali. Porto le regole dentro le scelte di prodotto, al momento giusto e con il linguaggio del destinatario.</p>
         <ul class="roles" aria-label="I miei mestieri">
           <li>Avvocato</li>
@@ -176,8 +189,10 @@
           <span class="craft-num">01 · Avvocato</span>
           <h3 class="h3">Leggo le regole per intero</h3>
           <p>GDPR, AI Act, European Accessibility Act, Digital Services Act, Codice del Consumo. Le conosco nel dettaglio, comprese eccezioni e scadenze.</p>
-          <p class="craft-redline" aria-label="Esempio">
+          <p class="craft-redline">
+            <span class="visually-hidden">Esempio. Prima:</span>
             <del>Il trattamento è effettuato ai sensi della normativa vigente.</del>
+            <span class="visually-hidden">Dopo:</span>
             <ins>Usiamo la tua email solo per inviarti la fattura.</ins>
           </p>
         </li>
@@ -185,8 +200,10 @@
           <span class="craft-num">02 · Esperienza di prodotto</span>
           <h3 class="h3">So come nasce un prodotto</h3>
           <p>Backlog, sprint, user story, rilasci. So quando una scelta costa poco e quando invece rimette in discussione mesi di lavoro.</p>
-          <p class="craft-redline" aria-label="Esempio">
+          <p class="craft-redline">
+            <span class="visually-hidden">Esempio. Prima:</span>
             <del>Parere legale a progetto finito</del>
+            <span class="visually-hidden">Dopo:</span>
             <ins>Criteri di accettazione nella user story</ins>
           </p>
         </li>
@@ -194,8 +211,10 @@
           <span class="craft-num">03 · Legal designer</span>
           <h3 class="h3">Rendo il diritto usabile</h3>
           <p>Informative, contratti, interfacce e guide progettate per le persone che le leggono: linguaggio semplice, struttura chiara, accessibilità.</p>
-          <p class="craft-redline" aria-label="Esempio">
+          <p class="craft-redline">
+            <span class="visually-hidden">Esempio. Prima:</span>
             <del>Art. 52 e ss. D.Lgs. 206/2005</del>
+            <span class="visually-hidden">Dopo:</span>
             <ins>Hai 14 giorni per cambiare idea.</ins>
           </p>
         </li>
@@ -217,7 +236,7 @@
       <div class="about-copy">
         <p class="eyebrow">Chi sono</p>
         <h2 class="h2" id="chi-sono-title">Un avvocato che ha passato quasi dieci anni <em>dentro</em> i team di prodotto.</h2>
-        <p class="lead">Sono Michele Pozzo. Ho studiato legge e poi ho lavorato per quasi dieci anni nel product management di prodotti digitali, gli ultimi quattro su servizi pubblici utilizzati ogni giorno da milioni di persone, dove ogni scelta di prodotto ha un impatto su larga scala.</p>
+        <p class="lead">Sono Michele Pozzo. Ho studiato diritto e poi ho lavorato per quasi dieci anni nel product management di prodotti digitali, gli ultimi quattro su servizi pubblici utilizzati ogni giorno da milioni di persone, dove ogni scelta di prodotto ha un impatto su larga scala.</p>
         <p>Ho imparato che la compliance funziona quando entra nel prodotto dal primo giorno: nei requisiti, nei testi dell'interfaccia, nei flussi. Se arriva alla fine diventa un costo, un ritardo o un rischio. Per questo lavoro accanto a designer, sviluppatori e legali, non al posto loro.</p>
         <p>Il legal design è il modo in cui tengo insieme le due cose: regole esatte, scritte e progettate per chi le deve usare davvero.</p>
         <ul class="facts">
@@ -356,7 +375,7 @@
           <p>Che cos'è il legal design e perché conviene portare il diritto nel prodotto quando costa poco, invece di farlo arrivare a progetto finito. Con esempi pratici per software house e aziende che sviluppano prodotti digitali.</p>
           <div class="talk-actions">
             <a class="btn btn--ghost" href="#" data-video-link target="_blank" rel="noopener">
-              Apri su YouTube<svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              Apri su YouTube<span class="visually-hidden"> (si apre in una nuova scheda)</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
             <a class="btn btn--ghost" href="lettore.html?guida=il-giurista-designer-nel-prodotto">
               <svg aria-hidden="true"><use href="#i-book"/></svg>Leggi la guida del webinar
@@ -367,6 +386,8 @@
       </article>
 
       </section>
+
+      <p class="disclaimer duo-note">Guida “Il Giurista Designer nel Prodotto”: realizzata con l'intelligenza artificiale e progettata da me come legal designer. Ha finalità divulgative e non sostituisce il testo ufficiale delle norme né la consulenza di un professionista. Norme aggiornate a novembre 2026.</p>
 
       <div class="talk-more reveal">
         <p>Organizzi un evento, un webinar o una formazione interna su legal design, privacy, AI Act o accessibilità?</p>
@@ -388,12 +409,12 @@
           <svg aria-hidden="true"><use href="#i-mail"/></svg>ciao@michelepozzo.digital
         </a>
         <a class="btn btn--outline-light" href="https://www.linkedin.com/in/michelepozzo/" target="_blank" rel="noopener me">
-          <svg aria-hidden="true"><use href="#i-in"/></svg>Scrivimi su LinkedIn
+          <svg aria-hidden="true"><use href="#i-in"/></svg>Scrivimi su LinkedIn<span class="visually-hidden"> (si apre in una nuova scheda)</span>
         </a>
         <p class="mail-help" role="status" data-mail-help></p>
         <p class="mail-alt">Usi la posta nel browser? Scrivimi da
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ciao@michelepozzo.digital&amp;su=Contatto%20dal%20sito" target="_blank" rel="noopener">Gmail</a> o
-          <a href="https://outlook.live.com/mail/0/deeplink/compose?to=ciao@michelepozzo.digital&amp;subject=Contatto%20dal%20sito" target="_blank" rel="noopener">Outlook</a>.
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ciao@michelepozzo.digital&amp;su=Contatto%20dal%20sito" target="_blank" rel="noopener">Gmail<span class="visually-hidden"> (si apre in una nuova scheda)</span></a> o
+          <a href="https://outlook.live.com/mail/0/deeplink/compose?to=ciao@michelepozzo.digital&amp;subject=Contatto%20dal%20sito" target="_blank" rel="noopener">Outlook<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>.
         </p>
       </div>
     </div>

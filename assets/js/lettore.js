@@ -263,6 +263,8 @@ async function buildText(p) {
   p.el.appendChild(div);
   p.textLayer = new pdfjsLib.TextLayer({ textContentSource: content, container: div, viewport: p.proxy.getViewport({ scale: state.scale }) });
   await p.textLayer.render();
+  // PDF.js adds an empty measuring canvas to <body>: keep it out of the accessibility tree.
+  document.querySelectorAll('body > canvas.hiddenCanvasElement').forEach((c) => c.setAttribute('aria-hidden', 'true'));
   // Keep the selection end inside the page while dragging.
   const end = document.createElement('div');
   end.className = 'endOfContent';

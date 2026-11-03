@@ -52,7 +52,10 @@
 
 @media (max-width: 720px) {
   .reader-body { --bar-h: 56px; }
-  .reader-back span, .reader-btn span { display: none; }
+  /* Labels hidden visually but kept for screen readers */
+  .reader-back .btn-label, .reader-btn .btn-label {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
   .reader-back { padding: 0; width: 44px; justify-content: center; }
   .reader-btn { padding: 0; width: 44px; }
   .reader-title { font-size: var(--t-sm); }
@@ -67,6 +70,7 @@
   -webkit-overflow-scrolling: touch;
   outline: none;
 }
+.viewer:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
 .pages {
   display: grid; justify-items: center; gap: var(--page-gap);
   width: max-content; min-width: 100%;

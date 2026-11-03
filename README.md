@@ -24,6 +24,8 @@ assets/fonts/              Atkinson Hyperlegible Next e Mono (licenza SIL OFL)
 assets/img/foto/           ritratti (WebP con JPEG di riserva)
 assets/img/materiali/      copertine dei materiali
 assets/img/og-image.png    anteprima per i social (1200×630)
+assets/img/logo.svg        logo (originale); in index.html è inserito nell'header come SVG in linea, per usare i font del sito
+assets/img/favicon.svg     icona del sito: la "D" del logo
 assets/materiali/          guide in PDF
 robots.txt, sitemap.xml    file per i motori di ricerca
 llms.txt                   sintesi per i motori di risposta basati su AI
