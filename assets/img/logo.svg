@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" width="1520" height="320" role="img" aria-label="Avv. Michele Pozzo, Legal Designer">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0E1135"/>
+      <stop offset="1" stop-color="#2B36D9"/>
+    </linearGradient>
+  </defs>
+  <path d="M24,28 H76 A52,52 0 0 1 76,132 H24 Z" fill="url(#g)"/>
+  <text x="152" y="88" font-family="'Atkinson Hyperlegible Next','Helvetica Neue',Arial,sans-serif" font-size="50" letter-spacing="-1" fill="#0E1135"><tspan font-weight="400">Avv.</tspan><tspan font-weight="700" dx="12">Michele Pozzo</tspan></text>
+  <rect x="152" y="102" width="238" height="30" rx="3" fill="#FFE680"/>
+  <text x="164" y="123" font-family="'Atkinson Hyperlegible Mono','Courier New',monospace" font-size="17" font-weight="500" letter-spacing="5" fill="#0E1135">LEGAL DESIGNER</text>
+</svg>

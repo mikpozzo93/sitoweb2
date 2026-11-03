@@ -138,10 +138,12 @@ em { font-style: normal; }
   transition: border-color 0.2s;
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
-.header-inner { height: var(--header-h); display: flex; align-items: center; justify-content: flex-end; gap: var(--s-4); }
+.header-inner { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); }
+.brand { display: inline-flex; align-items: center; min-height: 44px; flex: none; border-radius: var(--radius-sm); }
+.brand-logo { display: block; height: 46px; width: auto; aspect-ratio: 548 / 104; }
 .nav ul { display: flex; gap: var(--s-2); }
 .nav a {
-  display: block; padding: var(--s-2) var(--s-3); border-radius: 999px;
+  display: block; white-space: nowrap; padding: var(--s-2) var(--s-3); border-radius: 999px;
   color: var(--ink); text-decoration: none; font-weight: 600; font-size: var(--t-sm);
 }
 .nav a:hover, .nav a[aria-current="true"] { background: var(--paper-2); }
@@ -153,8 +155,10 @@ em { font-style: normal; }
 }
 .nav-toggle svg { width: 24px; height: 24px; }
 
-@media (max-width: 860px) {
+/* The logo and the full menu need about 1060px; below that the menu folds. */
+@media (max-width: 1060px) {
   .nav-toggle { display: grid; }
+  .brand-logo { height: 40px; }
   .nav {
     position: fixed; inset: var(--header-h) 0 auto 0;
     background: var(--paper); border-bottom: 1px solid var(--line);
