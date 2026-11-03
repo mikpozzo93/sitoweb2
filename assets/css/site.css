@@ -228,7 +228,7 @@ em { font-style: normal; }
 .about-photo img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; height: auto; aspect-ratio: 800 / 1198; object-fit: cover; }
 .about-photo figcaption { margin-top: var(--s-3); font: var(--t-xs)/1.4 var(--f-mono); color: var(--ink-2); }
 .about-copy { display: grid; gap: var(--s-5); }
-.about-copy .lead { color: var(--ink); }
+.about-copy .lead { font-size: var(--t-md); color: var(--ink-2); }
 .about-copy p:not(.lead):not(.eyebrow) { color: var(--ink-2); max-width: 62ch; }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3); margin-top: var(--s-3); }
 .facts li {
