@@ -151,7 +151,7 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <h1 class="hero-title" id="hero-title">Il diritto, progettato per chi lo deve <span class="strike">subire</span> <ins>usare</ins>.</h1>
+        <h1 class="hero-title" id="hero-title">Il diritto, progettato per chi lo deve <span class="strike" aria-hidden="true">subire</span> <ins>usare</ins><span class="visually-hidden">, non subire</span>.</h1>
         <p class="lead">Sono avvocato e da quasi dieci anni lavoro nel product management di prodotti digitali. Porto le regole dentro le scelte di prodotto, al momento giusto e con il linguaggio del destinatario.</p>
         <ul class="roles" aria-label="I miei mestieri">
           <li>Avvocato</li>
@@ -189,8 +189,10 @@
           <span class="craft-num">01 · Avvocato</span>
           <h3 class="h3">Leggo le regole per intero</h3>
           <p>GDPR, AI Act, European Accessibility Act, Digital Services Act, Codice del Consumo. Le conosco nel dettaglio, comprese eccezioni e scadenze.</p>
-          <p class="craft-redline" aria-label="Esempio">
+          <p class="craft-redline">
+            <span class="visually-hidden">Esempio. Prima:</span>
             <del>Il trattamento è effettuato ai sensi della normativa vigente.</del>
+            <span class="visually-hidden">Dopo:</span>
             <ins>Usiamo la tua email solo per inviarti la fattura.</ins>
           </p>
         </li>
@@ -198,8 +200,10 @@
           <span class="craft-num">02 · Esperienza di prodotto</span>
           <h3 class="h3">So come nasce un prodotto</h3>
           <p>Backlog, sprint, user story, rilasci. So quando una scelta costa poco e quando invece rimette in discussione mesi di lavoro.</p>
-          <p class="craft-redline" aria-label="Esempio">
+          <p class="craft-redline">
+            <span class="visually-hidden">Esempio. Prima:</span>
             <del>Parere legale a progetto finito</del>
+            <span class="visually-hidden">Dopo:</span>
             <ins>Criteri di accettazione nella user story</ins>
           </p>
         </li>
@@ -207,8 +211,10 @@
           <span class="craft-num">03 · Legal designer</span>
           <h3 class="h3">Rendo il diritto usabile</h3>
           <p>Informative, contratti, interfacce e guide progettate per le persone che le leggono: linguaggio semplice, struttura chiara, accessibilità.</p>
-          <p class="craft-redline" aria-label="Esempio">
+          <p class="craft-redline">
+            <span class="visually-hidden">Esempio. Prima:</span>
             <del>Art. 52 e ss. D.Lgs. 206/2005</del>
+            <span class="visually-hidden">Dopo:</span>
             <ins>Hai 14 giorni per cambiare idea.</ins>
           </p>
         </li>
@@ -369,7 +375,7 @@
           <p>Che cos'è il legal design e perché conviene portare il diritto nel prodotto quando costa poco, invece di farlo arrivare a progetto finito. Con esempi pratici per software house e aziende che sviluppano prodotti digitali.</p>
           <div class="talk-actions">
             <a class="btn btn--ghost" href="#" data-video-link target="_blank" rel="noopener">
-              Apri su YouTube<svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              Apri su YouTube<span class="visually-hidden"> (si apre in una nuova scheda)</span><svg aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
             <a class="btn btn--ghost" href="lettore.html?guida=il-giurista-designer-nel-prodotto">
               <svg aria-hidden="true"><use href="#i-book"/></svg>Leggi la guida del webinar
@@ -403,12 +409,12 @@
           <svg aria-hidden="true"><use href="#i-mail"/></svg>ciao@michelepozzo.digital
         </a>
         <a class="btn btn--outline-light" href="https://www.linkedin.com/in/michelepozzo/" target="_blank" rel="noopener me">
-          <svg aria-hidden="true"><use href="#i-in"/></svg>Scrivimi su LinkedIn
+          <svg aria-hidden="true"><use href="#i-in"/></svg>Scrivimi su LinkedIn<span class="visually-hidden"> (si apre in una nuova scheda)</span>
         </a>
         <p class="mail-help" role="status" data-mail-help></p>
         <p class="mail-alt">Usi la posta nel browser? Scrivimi da
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ciao@michelepozzo.digital&amp;su=Contatto%20dal%20sito" target="_blank" rel="noopener">Gmail</a> o
-          <a href="https://outlook.live.com/mail/0/deeplink/compose?to=ciao@michelepozzo.digital&amp;subject=Contatto%20dal%20sito" target="_blank" rel="noopener">Outlook</a>.
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ciao@michelepozzo.digital&amp;su=Contatto%20dal%20sito" target="_blank" rel="noopener">Gmail<span class="visually-hidden"> (si apre in una nuova scheda)</span></a> o
+          <a href="https://outlook.live.com/mail/0/deeplink/compose?to=ciao@michelepozzo.digital&amp;subject=Contatto%20dal%20sito" target="_blank" rel="noopener">Outlook<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>.
         </p>
       </div>
     </div>

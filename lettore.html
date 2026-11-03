@@ -29,26 +29,26 @@
 
 <header class="reader-bar">
   <a class="reader-back" href="./#materiali">
-    <svg aria-hidden="true"><use href="#i-back"/></svg><span>Torna al sito</span>
+    <svg aria-hidden="true"><use href="#i-back"/></svg><span class="btn-label">Torna al sito</span>
   </a>
   <h1 class="reader-title" data-title>Guida</h1>
   <div class="reader-bar-actions">
     <button class="reader-btn" type="button" data-toc-open aria-haspopup="dialog" disabled>
-      <svg aria-hidden="true"><use href="#i-list"/></svg><span>Indice</span>
+      <svg aria-hidden="true"><use href="#i-list"/></svg><span class="btn-label">Indice</span>
     </button>
     <a class="reader-btn reader-btn--primary" href="#" data-download download>
-      <svg aria-hidden="true"><use href="#i-download"/></svg><span>Scarica</span>
+      <svg aria-hidden="true"><use href="#i-download"/></svg><span class="btn-label">Scarica</span>
     </a>
   </div>
 </header>
 
-<p class="visually-hidden" data-a11y-note>
+
+<main class="viewer" id="viewer" tabindex="0" aria-label="Pagine della guida">
+  <p class="visually-hidden" data-a11y-note>
   Questo lettore mostra le pagine della guida come immagini con il testo selezionabile.
   Con un lettore di schermo è più comodo il PDF taggato, con titoli e segnalibri:
   <a href="#" data-download-alt>scarica il PDF</a>.
 </p>
-
-<main class="viewer" id="viewer" tabindex="-1" aria-label="Pagine della guida">
   <div class="viewer-status" data-status role="status">
     <span class="spinner" aria-hidden="true"></span>
     <span data-status-text>Sto caricando la guida…</span>
