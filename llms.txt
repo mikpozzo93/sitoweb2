@@ -9,6 +9,10 @@
 - Esperienza su identità digitale, servizi fiduciari e privacy, con rapporti diretti con autorità di controllo.
 - Relatore a convegni tech e di design, tra cui Exeen Talks (giugno 2026).
 
+## Privacy nel software
+
+Lavora come analyst tra team legale e team di sviluppo: mappa i flussi di dati, traduce GDPR e norme collegate in user story, criteri di accettazione e voci della Definition of Done, conduce la DPIA con architetti e sviluppatori e fa la privacy review delle funzionalità prima del rilascio.
+
 ## Temi
 
 Privacy by design (GDPR), AI Act, accessibilità (European Accessibility Act, WCAG 2.2), dark e fair pattern (DSA, Codice del Consumo), diritti dei consumatori, identità digitale (eIDAS).

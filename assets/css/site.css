@@ -139,7 +139,7 @@ em { font-style: normal; }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
 .header-inner { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); }
 .brand { display: inline-flex; align-items: center; min-height: 44px; flex: none; border-radius: var(--radius-sm); }
-.brand-logo { display: block; height: 46px; width: auto; aspect-ratio: 548 / 104; }
+.brand-logo { display: block; height: 46px; width: auto; aspect-ratio: 587 / 104; }
 .nav ul { display: flex; gap: var(--s-2); }
 .nav a {
   display: block; white-space: nowrap; padding: var(--s-2) var(--s-3); border-radius: 999px;
@@ -368,6 +368,71 @@ em { font-style: normal; }
 .talk-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 .talk-actions [hidden] { display: none; }
 .footer-top { display: inline-block; padding-block: 12px; margin-block: -12px; }
+
+/* ---------- Privacy in software: from the rule to the requirement ---------- */
+.section--ink { background: var(--ink); color: #FFFFFF; }
+.section--ink .eyebrow { color: #C3C7E6; }
+.section--ink .h2 em { color: var(--ins-band); }
+.section--ink .lead { color: #C3C7E6; }
+.section--ink :focus-visible { outline-color: var(--ins-band); }
+
+.translate {
+  background: var(--surface); color: var(--ink);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  padding: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+}
+.translate-head {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7);
+  padding: 0 var(--s-4) var(--s-3); border-bottom: 1px solid var(--line);
+  font: 700 var(--t-xs)/1.2 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.translate-head span:first-child { color: var(--ink-2); }
+.translate-head span:last-child { color: var(--accent); }
+.translate-list { list-style: none; margin: 0; padding: 0; }
+.translate-row {
+  position: relative;
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7);
+  padding: var(--s-5) var(--s-4); border-bottom: 1px dashed var(--line);
+}
+.translate-row:last-child { border-bottom: 0; padding-bottom: var(--s-2); }
+/* the arrow between the rule and the requirement */
+.translate-row::after {
+  content: "→"; position: absolute; left: 50%; top: var(--s-5); transform: translateX(-50%);
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--paper-2); color: var(--accent); font-weight: 700;
+}
+.translate-law, .translate-req { display: grid; gap: var(--s-2); align-content: start; padding-left: var(--s-4); }
+.translate-law { border-left: 3px solid var(--line); }
+.translate-law p { color: var(--ink-2); font-style: italic; }
+.translate-req { border-left: 3px solid var(--note-line); }
+.translate-req p { color: var(--ink); }
+.translate-ref { font: var(--t-xs)/1.35 var(--f-mono); color: var(--ink-2); }
+.translate-req .translate-ref { color: var(--accent); font-weight: 700; }
+.translate-ac { display: grid; gap: 0.35rem; font-size: var(--t-sm); color: var(--ink); }
+.translate-ac li { position: relative; padding-left: 1.4rem; }
+.translate-ac li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+.analyst { margin-top: var(--s-8); }
+.analyst-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-6) var(--s-7); counter-reset: an; }
+.analyst-list li { display: grid; gap: var(--s-2); align-content: start; counter-increment: an; padding-top: var(--s-4); border-top: 1px solid rgb(255 255 255 / 0.18); }
+.analyst-list li::before { content: counter(an, decimal-leading-zero); font: 700 var(--t-sm)/1 var(--f-mono); color: var(--ins-band); }
+.analyst-list h3 { font-size: var(--t-lg); color: #FFFFFF; }
+.analyst-list p { color: #C3C7E6; }
+.analyst-cta {
+  margin-top: var(--s-7); padding: var(--s-5); border: 1.5px dashed rgb(255 255 255 / 0.3); border-radius: var(--radius);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4);
+}
+.analyst-cta p { color: #FFFFFF; font-size: var(--t-lg); max-width: 46ch; }
+
+@media (max-width: 760px) {
+  .translate-head { display: none; }
+  .translate-row { grid-template-columns: 1fr; gap: var(--s-6); padding: var(--s-5) 0; }
+  .translate-row:first-child { padding-top: var(--s-2); }
+  .translate-row::after { content: "↓"; top: auto; bottom: auto; left: var(--s-4); transform: none; position: static; margin: calc(var(--s-6) * -1 + 4px) 0; order: 1; }
+  .translate-req { order: 2; }
+  .analyst-list { grid-template-columns: 1fr; gap: var(--s-5); }
+  .analyst-cta p { font-size: var(--t-md); }
+}
 
 /* ---------- Materials and talks, side by side on wide screens ---------- */
 .duo { padding-block: var(--s-9); }
