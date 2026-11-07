@@ -39,6 +39,7 @@ llms.txt                   sintesi per i motori di risposta basati su AI
 | (senza ancora) | Tre competenze, un solo lavoro: avvocato, esperienza di prodotto, legal designer |
 | `#chi-sono` | Biografia, punti chiave e "cosa non sono" |
 | `#temi` | Di cosa mi occupo: GDPR, AI Act, accessibilità, dark pattern, consumatori, identità digitale |
+| `#requisiti` | Privacy nel software: dalla norma al requisito per gli sviluppatori, il lavoro da analyst |
 | `#materiali` | I miei materiali: "Il Giurista Designer nel Prodotto", guida in PDF tratta dal webinar Exeen Talks |
 | `#interventi` | I miei interventi: webinar Exeen Talks, invito a intervenire come relatore |
 | `#contatti` | Email (ciao@michelepozzo.digital) e LinkedIn |
