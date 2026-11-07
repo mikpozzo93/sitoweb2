@@ -417,13 +417,35 @@ em { font-style: normal; }
 }
 .analyst-cta p { color: #FFFFFF; font-size: var(--t-lg); max-width: 46ch; }
 
+/* Phones: the examples and the ways of working become rows of cards to
+   swipe, like the topics, so the section stays short. */
 @media (max-width: 760px) {
+  .translate { background: none; box-shadow: none; padding: 0; }
+  .translate-list, .analyst-list {
+    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 86%;
+    gap: var(--s-3);
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 1rem;
+    margin-inline: -1rem; padding: 4px 1rem var(--s-4);
+    scrollbar-width: thin;
+  }
+  .translate-list > li, .analyst-list > li { scroll-snap-align: start; }
+  .translate-list .translate-row {
+    background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: var(--s-4) !important; border-bottom: 0; align-content: start;
+  }
+  .analyst-list li {
+    border: 1px solid rgb(255 255 255 / 0.28); border-radius: var(--radius);
+    padding: var(--s-4);
+  }
+  .analyst-list.reveal, .analyst-list .reveal { opacity: 1; transform: none; }
+  .analyst { margin-top: var(--s-6); }
+  .analyst-cta { margin-top: var(--s-5); }
   .translate-head { display: none; }
   .translate-row { grid-template-columns: 1fr; gap: var(--s-6); padding: var(--s-5) 0; }
   .translate-row:first-child { padding-top: var(--s-2); }
   .translate-row::after { content: "↓"; top: auto; bottom: auto; left: var(--s-4); transform: none; position: static; margin: calc(var(--s-6) * -1 + 4px) 0; order: 1; }
   .translate-req { order: 2; }
-  .analyst-list { grid-template-columns: 1fr; gap: var(--s-5); }
   .analyst-cta p { font-size: var(--t-md); }
 }
 
