@@ -182,14 +182,6 @@ em { font-style: normal; }
   text-decoration: none; color: var(--accent);
   background: linear-gradient(transparent 62%, var(--ins-band) 62%);
 }
-.roles { display: flex; flex-wrap: wrap; gap: var(--s-2); }
-.roles li {
-  font: 700 var(--t-sm)/1 var(--f-mono);
-  padding: 0.6rem 0.9rem; border-radius: 999px;
-  border: 1.5px solid var(--ink); background: var(--surface);
-}
-.roles li:nth-child(2) { border-color: var(--accent); color: var(--accent); }
-.roles li:nth-child(3) { background: var(--ink); color: #fff; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 
 .portrait { position: relative; margin: 0; }
@@ -306,7 +298,7 @@ em { font-style: normal; }
   border: 0; cursor: pointer; color: #fff; text-align: left;
   background:
     radial-gradient(circle at 80% 20%, rgb(43 54 217 / 0.9), transparent 55%),
-    linear-gradient(135deg, #0E1135 0%, #1E28B8 100%);
+    linear-gradient(135deg, var(--band) 0%, var(--accent) 100%);
   font: inherit;
 }
 .video-poster[disabled] { cursor: default; }
@@ -370,11 +362,12 @@ em { font-style: normal; }
 .footer-top { display: inline-block; padding-block: 12px; margin-block: -12px; }
 
 /* ---------- Privacy in software: from the rule to the requirement ---------- */
-.section--ink { background: var(--ink); color: #FFFFFF; }
-.section--ink .eyebrow { color: #C3C7E6; }
-.section--ink .h2 em { color: var(--ins-band); }
-.section--ink .lead { color: #C3C7E6; }
-.section--ink :focus-visible { outline-color: var(--ins-band); }
+/* Same blue band as the contact section, so the page keeps one blue */
+.section--band { background: var(--band); color: var(--on-band); }
+.section--band .eyebrow { color: var(--on-band-2); }
+.section--band .h2 em { color: var(--ins-band); }
+.section--band .lead { color: var(--on-band-2); }
+.section--band :focus-visible { outline-color: var(--ins-band); }
 
 .translate {
   background: var(--surface); color: var(--ink);
@@ -414,10 +407,10 @@ em { font-style: normal; }
 
 .analyst { margin-top: var(--s-8); }
 .analyst-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-6) var(--s-7); counter-reset: an; }
-.analyst-list li { display: grid; gap: var(--s-2); align-content: start; counter-increment: an; padding-top: var(--s-4); border-top: 1px solid rgb(255 255 255 / 0.18); }
+.analyst-list li { display: grid; gap: var(--s-2); align-content: start; counter-increment: an; padding-top: var(--s-4); border-top: 1px solid rgb(255 255 255 / 0.28); }
 .analyst-list li::before { content: counter(an, decimal-leading-zero); font: 700 var(--t-sm)/1 var(--f-mono); color: var(--ins-band); }
 .analyst-list h3 { font-size: var(--t-lg); color: #FFFFFF; }
-.analyst-list p { color: #C3C7E6; }
+.analyst-list p { color: var(--on-band-2); }
 .analyst-cta {
   margin-top: var(--s-7); padding: var(--s-5); border: 1.5px dashed rgb(255 255 255 / 0.3); border-radius: var(--radius);
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4);
