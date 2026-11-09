@@ -1,0 +1,84 @@
+/* Versione breve: same stylesheet as the full guide, a few overrides. */
+@import url("../giurista-designer/style.css");
+
+@page {
+  @bottom-left { content: "Il Giurista Designer nel Prodotto · Versione breve"; }
+}
+.chapter h1 { font-size: 32px; }
+.lede { font-size: 18.5px; margin: 10px 0 16px; }
+.chapter h2 { font-size: 21px; margin: 18px 0 6px; }
+.box { margin: 12px 0; }
+.oneline { margin-bottom: 14px; }
+table { margin: 10px 0 12px; font-size: 15px; }
+th, td { padding: 7px 9px; }
+
+/* Lenses */
+.lenses { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0 16px; break-inside: avoid; }
+.lens { border-top: 5px solid var(--line); background: var(--paper); border-radius: 0 0 10px 10px; padding: 10px 12px; font-size: 14.5px; line-height: 1.4; }
+.lens b { display: block; font-size: 16px; margin-bottom: 2px; }
+.lens.d { border-color: #5560E0; } .lens.f { border-color: #C9A400; } .lens.s { border-color: #2E8B57; }
+.lens.q { border-color: var(--band); background: var(--band); color: #fff; }
+.lens.q b { color: #FFE680; }
+
+/* Canvas grid */
+.canvas { display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: auto auto auto; gap: 6px; margin: 12px 0 14px; font-size: 13.5px; line-height: 1.35; break-inside: avoid; }
+.canvas div { border: 1px solid var(--line); border-radius: 8px; padding: 8px 9px; background: #fff; }
+.canvas b { display: block; font-size: 14px; color: var(--accent); margin-bottom: 3px; }
+.canvas .kp { grid-column: 1; grid-row: 1 / 3; }
+.canvas .ka { grid-column: 2; grid-row: 1; }
+.canvas .kr { grid-column: 2; grid-row: 2; }
+.canvas .vp { grid-column: 3; grid-row: 1 / 3; background: var(--note-bg); border-color: var(--note-line); }
+.canvas .cr { grid-column: 4; grid-row: 1; }
+.canvas .ch { grid-column: 4; grid-row: 2; }
+.canvas .cs { grid-column: 5; grid-row: 1 / 3; }
+.canvas .co { grid-column: 1 / 3; grid-row: 3; }
+.canvas .re { grid-column: 3 / 6; grid-row: 3; }
+
+/* Test card */
+.testcard { background: var(--ink); color: #fff; border-radius: 12px; padding: 14px 18px; font-family: var(--f-mono); font-size: 14.5px; line-height: 1.45; break-inside: avoid; }
+.testcard .k { color: #9EE6C9; font-weight: 700; display: block; margin-top: 6px; }
+.testcard .t { color: #FFE680; font-weight: 700; }
+
+/* Before / after rows */
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: center; margin: 8px 0; break-inside: avoid; }
+.ba .old { color: var(--ink-2); text-decoration: line-through; text-decoration-color: var(--redline); font-size: 15px; line-height: 1.45; }
+.ba .new { background: #FFE680; border-radius: 8px; padding: 8px 12px; font-weight: 700; font-size: 16px; line-height: 1.35; }
+
+/* Contacts */
+.contacts { display: grid; grid-template-columns: 250px 1fr; gap: 32px; align-items: start; margin-top: 18px; }
+.contacts img { width: 250px; height: 374px; object-fit: cover; border-radius: 16px; }
+.contacts dl { margin: 0; }
+.contacts dt { font-family: var(--f-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--accent); margin-top: 16px; }
+.contacts dt:first-child { margin-top: 0; }
+.contacts dd { margin: 2px 0 0; font-size: 18px; font-weight: 700; word-break: break-word; }
+.contacts dd a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.mini-toc ol { list-style: none; padding: 0; margin: 0; }
+.mini-toc li { display: flex; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); margin: 0; font-size: 16px; }
+.mini-toc .n { font-family: var(--f-mono); font-weight: 700; color: var(--accent); width: 26px; }
+.mini-toc a { color: var(--ink); text-decoration: none; font-weight: 700; flex: 1; }
+.mini-toc .p { font-family: var(--f-mono); font-size: 14px; color: var(--ink-2); }
+
+/* Denser setting so each part fits one page */
+@page { margin: 52px 56px 72px 56px; }
+body { font-size: 16px; line-height: 1.5; }
+p { margin-bottom: 10px; }
+li { margin-bottom: 4px; }
+.chapter h1 { font-size: 29px; }
+.lede { font-size: 17px; margin: 8px 0 12px; }
+.chapter h2 { font-size: 19px; margin: 14px 0 6px; }
+.box { padding: 10px 16px 2px; margin: 10px 0; }
+.box > .box-title { font-size: 16.5px; margin-bottom: 6px; }
+.example { padding: 12px 16px 2px; margin: 12px 0; }
+.oneline { padding: 10px 14px; margin-bottom: 12px; }
+blockquote { font-size: 17px; margin: 12px 0; }
+.flow { margin: 8px 0 12px; }
+.flow li { min-height: 62px; padding-top: 8px; padding-bottom: 8px; font-size: 14px; }
+.keys { margin: 10px 0; }
+.key { padding: 10px 12px; }
+.key b { font-size: 24px; }
+ol.steps > li { margin-bottom: 8px; padding-left: 40px; }
+ol.steps > li::before { width: 26px; height: 26px; font-size: 14px; }
+.cols { margin: 10px 0; }
+.col li { font-size: 15px; margin-bottom: 6px; }
+.closing { padding: 18px 22px; margin: 14px 0 0; }
+.closing p { font-size: 19px; }
