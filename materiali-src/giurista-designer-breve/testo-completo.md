@@ -329,14 +329,6 @@ LinkedIn
 Email  
 <ciao@michelepozzo.digital>
 
-Sito  
-[mikpozzo93.github.io/sitoweb2](https://mikpozzo93.github.io/sitoweb2/)
-
-Sul sito trovi anche
-
-- la versione integrale di questa guida, con esempi, checklist e riferimenti normativi completi;
-- l’ebook gratuito **“Acquistare in tranquillità”**, il Codice del consumo spiegato per tutti (PDF ed EPUB).
-
 Progetterai per **spuntare una casella normativa** o per **onorare un diritto del tuo utente**?
 
 Materiale divulgativo: semplifica per farsi capire, ma non sostituisce il testo ufficiale delle norme né la consulenza di un professionista sul caso concreto. Norme aggiornate a novembre 2026.
